@@ -1,0 +1,12 @@
+﻿  main.cpp
+  mundo.cpp
+C:\Users\Marta\Desktop\AJEDREZ - copia (3)b\AJEDREZ - copia\src\mundo.cpp(44,29): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Marta\Desktop\AJEDREZ - copia (3)b\AJEDREZ - copia\src\mundo.cpp(50,28): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Marta\Desktop\AJEDREZ - copia (3)b\AJEDREZ - copia\src\mundo.cpp(106,15): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Marta\Desktop\AJEDREZ - copia (3)b\AJEDREZ - copia\src\mundo.cpp(107,15): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Marta\Desktop\AJEDREZ - copia (3)b\AJEDREZ - copia\src\mundo.cpp(108,21): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Marta\Desktop\AJEDREZ - copia (3)b\AJEDREZ - copia\src\mundo.cpp(109,21): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+  rey.cpp
+  reyN.cpp
+  Generando código...
+  Pang.vcxproj -> C:\Users\Marta\Desktop\AJEDREZ - copia (3)b\AJEDREZ - copia\bin\Pang.exe
