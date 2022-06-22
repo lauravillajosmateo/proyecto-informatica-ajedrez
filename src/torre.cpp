@@ -7,23 +7,15 @@
 using namespace std;
 
 
-torre::torre() {
-    rojo = verde = azul = 175;
-    posxini = posyini = 0;
-    turno = 0;
+torre::torre(Vector ptorre, int c) {
+    origen =ptorre;
+    color=c;
 }
 
-torre::torre(float x, float y, unsigned char r, unsigned char a, unsigned char v) {
-    rojo = r;
-    azul = a;
-    verde = v;
-    posxini = x;
-    posyini = y;
-}
+
 
 void torre::dibuja() {
-    glColor3ub(rojo, verde, azul);
-    glTranslatef(posxini, posyini, 0);
+    glTranslatef(origen.x, origen.y, 0);
     glEnable(GL_TEXTURE_2D);
     glBindTexture(GL_TEXTURE_2D, ETSIDI::getTexture("imagenes/torreB.png").id);
     glDisable(GL_LIGHTING);
@@ -40,23 +32,14 @@ void torre::dibuja() {
 }
 
 
-int torre::getturno() {
-    return turno;
-}
-
-void torre::setturno(int t)
+int torre::mov_correcto(Vector v)
 {
-    turno = t;
-}
-
-int torre::mov_correcto(float posxfin, float posyfin)
-{
-    if ((posxfin == posxini) && (posyfin == posyini)) {
+    if ((v.x == origen.x) && (v.y == origen.y)) {
         return ERROR;
     }
     else {
 
-        if ((posxfin == posxini) || (posyfin == posyini)) {
+        if ((v.x == origen.x) || (v.y == origen.y)) {
             return MOV_CORRECTO;
         }
         else {
@@ -67,34 +50,34 @@ int torre::mov_correcto(float posxfin, float posyfin)
 
 }
 
-void torre::movimientos(float posxfin, float posyfin)
+void torre::movimientos(Vector v)
 {
-    if (mov_correcto(posxfin, posyfin) == 1) {
+    if (mov_correcto(v.x, v.y) == 1) {
         turno = 1;
-        if ((posxfin == posxini) && (posyfin > posyini))//mover arriba
+        if ((v.x == origen.x) && (v.y > origen.y))//mover arriba
         {
             do {
-                posyini = posyini + 1;
-            } while (posyini != posyfin);
+                origen.y = origen.y + 1;
+            } while (origen.y != v.y);
         }
-        else if ((posxfin == posxini) && (posyfin < posyini))//mover abajo
+        else if ((v.x == origen.x) && (v.y < origen.y))//mover abajo
         {
             cout << "mueve abajo" << endl;
             do {
-                posyini = posyini - 1;
-            } while (posyini != posyfin);
+                origen.y = origen.y - 1;
+            } while (origen.y != v.y);
         }
-        else if ((posxfin > posxini) && (posyfin == posyini))//mover derecha
+        else if ((v.x > origen.x) && (v.y == origen.y))//mover derecha
         {
             do {
-                posxini = posxini + 1;
-            } while (posxini != posxfin);
+                origen.x = origen.x + 1;
+            } while (origen.x != v.x);
         }
-        else if ((posxfin < posxini) && (posyfin == posyini))//mover izquierda
+        else if ((v.x < origen.x) && (v.y == origen.y))//mover izquierda
         {
             do {
-                posxini = posxini - 1;
-            } while (posxini != posxfin);
+                origrn.x = origen.x - 1;
+            } while (origen.x != v.x);
         }
 
     }
@@ -102,12 +85,6 @@ void torre::movimientos(float posxfin, float posyfin)
         cout << "MOVIMIENTO INCORRECTO. Prueba otra vez." << endl;
 }
 
-void torre::mueve(float posxinif, float posyinif, float posxfinf, float posyfinf)
-{
-    if (posxinif == posxini && posyinif == posyini)
-        movimientos(posxfinf, posyfinf);
 
-
-}
 
 
