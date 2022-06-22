@@ -52,7 +52,7 @@ int torre::mov_correcto(Vector v)
 
 void torre::movimientos(Vector v)
 {
-    if (mov_correcto(v.x, v.y) == 1) {
+    if (mov_correcto(v) == 1) {
         turno = 1;
         if ((v.x == origen.x) && (v.y > origen.y))//mover arriba
         {
@@ -76,7 +76,7 @@ void torre::movimientos(Vector v)
         else if ((v.x < origen.x) && (v.y == origen.y))//mover izquierda
         {
             do {
-                origrn.x = origen.x - 1;
+                origen.x = origen.x - 1;
             } while (origen.x != v.x);
         }
 
