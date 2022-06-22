@@ -64,7 +64,7 @@ int rey::mov_correcto(Vector v)
 
 void rey::movimientos(Vector v)
 {
-	if (mov_correcto(v.x, v.y) == 1) {
+	if (mov_correcto(v) == 1) {
 		turno = 1;
 		if ((v.x == origen.x) && (v.y > origen.y))//mover arriba
 			origen.y = origen.y + 1;
