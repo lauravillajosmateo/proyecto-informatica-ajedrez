@@ -7,24 +7,17 @@
 #include "Pieza.h"
 
 class peon:public Pieza {
-private:
-	unsigned char rojo, verde, azul;
-	
 public:
 	int come;
 	int avanza;
-	int turno;
 
 public:
-	peon();
-	peon(float x, float y, unsigned char r, unsigned char a, unsigned char v);
+	peon():Pieza(){}
+	peon(Vector v, int c);
 
 	void dibuja();
-	void mueve(float posxfin, float posyfin);
 
-	int mov_correcto(float posxfin, float posyfin);
-	void movimientos(float posxfin, float posyfin);
-	
-	int getturno();
+	int mov_correcto(Vector);
+	void movimientos(Vector);
 
 };
