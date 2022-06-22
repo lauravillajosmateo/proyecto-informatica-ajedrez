@@ -5,23 +5,14 @@
 
 using namespace std;
 
-rey::rey() {
-	rojo = verde = azul = 175;
-	posxini = posyini = 0;
-	turno = 0;
+rey::rey(Vector prey, int c) {
+	origen=prey;
+	color=c;
 }
 
-rey::rey(float x, float y, unsigned char r, unsigned char a, unsigned char v) {
-	rojo = r;
-	azul = a;
-	verde = v;
-	posxini = x;
-	posyini = y;
-}
 
 void rey::dibuja() {
-	glColor3ub(rojo, verde, azul);
-	glTranslatef(posxini-0.1, posyini-0.4, 0.01);
+	glTranslatef(origen.x, origen.y, 0);
 	glEnable(GL_TEXTURE_2D);
 	glBindTexture(GL_TEXTURE_2D, ETSIDI::getTexture("imagenes/reyB.png").id);
 	glDisable(GL_LIGHTING);
@@ -34,34 +25,34 @@ void rey::dibuja() {
 	glEnd();
 	glEnable(GL_LIGHTING);
 	glDisable(GL_TEXTURE_2D);
-	glTranslatef(-posxini, -posyini, 0);
+	glTranslatef(-origen.x, -origen.y, 0);
 }
 
 
-int rey::mov_correcto(float posxfin, float posyfin)
+int rey::mov_correcto(Vector v)
 {
-	if (posyfin + 1 == posyini) // si el destino es hacia arriba
-		if (posxfin + 1 == posxini) // y en diagonal izquierda
+	if (v.y + 1 == origen.y) // si el destino es hacia arriba
+		if (v.x + 1 == origen.x) // y en diagonal izquierda
 			return MOV_CORRECTO;
-		else if (posxfin == posxini)//misma columna
+		else if (v.x == origen.x)//misma columna
 			return MOV_CORRECTO;
-		else if (posxfin - 1 == posxini) // en diagonal derecha
-			return MOV_CORRECTO;
-		else
-			return ERROR;
-	else if (posyfin == posyini) //si el destino es en la misma fila
-		if (posxfin + 1 == posxini) //hacia la izquierda
-			return MOV_CORRECTO;
-		else if (posxfin - 1 == posxini)//hacia la derecha
+		else if (v.x - 1 == origen.x) // en diagonal derecha
 			return MOV_CORRECTO;
 		else
 			return ERROR;
-	else if (posyfin - 1 == posyini) //si el destino es hacia abajo
-		if (posxfin + 1 == posxini)//hacia la izquierda
+	else if (v.y == origen.y) //si el destino es en la misma fila
+		if (v.x + 1 == origen.x) //hacia la izquierda
 			return MOV_CORRECTO;
-		else if (posxfin == posxini)
+		else if (v.x - 1 == origen.x)//hacia la derecha
 			return MOV_CORRECTO;
-		else if (posxfin - 1 == posxini)
+		else
+			return ERROR;
+	else if (v.y - 1 == origen.y) //si el destino es hacia abajo
+		if (v.x + 1 == origen.x)//hacia la izquierda
+			return MOV_CORRECTO;
+		else if (v.x == origen.x)
+			return MOV_CORRECTO;
+		else if (v.x - 1 == origen.x)
 			return MOV_CORRECTO;
 		else
 			return ERROR;
@@ -71,46 +62,37 @@ int rey::mov_correcto(float posxfin, float posyfin)
 }
 
 
-
-void rey::mueve(float posxinif, float posyinif, float posxfinf, float posyfinf)
+void rey::movimientos(Vector v)
 {
-	if (posxinif == posxini && posyinif == posyini)
-		movimientos(posxfinf, posyfinf);
-
-
-}
-
-void rey::movimientos(float posxfin, float posyfin)
-{
-	if (mov_correcto(posxfin, posyfin) == 1) {
+	if (mov_correcto(v.x, v.y) == 1) {
 		turno = 1;
-		if ((posxfin == posxini) && (posyfin > posyini))//mover arriba
-			posyini = posyini + 1;
-		else if ((posxfin == posxini) && (posyfin < posyini))//mover abajo
-			posyini = posyini - 1;
+		if ((v.x == origen.x) && (v.y > origen.y))//mover arriba
+			origen.y = origen.y + 1;
+		else if ((v.x == origen.x) && (v.y < origen.y))//mover abajo
+			origen.y = origen.y - 1;
 
-		else if ((posxfin > posxini) && (posyfin == posyini))
-			posxini = posxini + 1;//mover derecha
+		else if ((v.x > origen.x) && (v.y == origen.y))
+			origen.x = origen.x + 1;//mover derecha
 
-		else if ((posxfin < posxini) && (posyfin == posyini))//mover izquierda
-			posxini = posxini - 1;
-		else if ((posxfin > posxini) && (posyfin > posyini)) {//arriba-derecha
-			posxini = posxini + 1;
-			posyini = posyini + 1;
+		else if ((v.x < origen.x) && (v.y == origen.y))//mover izquierda
+			origen.x = origen.x - 1;
+		else if ((v.x > origen.x) && (v.y > origen.y)) {//arriba-derecha
+			origen.x = origen.x + 1;
+			origen.y = origen.y + 1;
 		}
-		else if ((posxfin > posxini) && (posyfin < posyini)) {//abajo-derecha
-			posxini = posxini + 1;
-			posyini = posyini - 1;
+		else if ((v.x > origen.x) && (v.y< origen.y)) {//abajo-derecha
+			origen.x = origen.x + 1;
+			origen.y = origen.y - 1;
 
 		}
-		else if ((posxfin > posxini) && (posyfin > posyini)) {//arriba-izquierda
-			posxini = posxini - 1;
-			posyini = posyini + 1;
+		else if ((v.x > origen.x) && (v.y > origen.y)) {//arriba-izquierda
+			origen.x = origen.x - 1;
+			origen.y = origen.y + 1;
 		}
-		else if ((posxfin < posxini) && (posyfin < posyini)) {//abajo-izquierda
+		else if ((v.x < origen.x) && (v.y < origen.y)) {//abajo-izquierda
 
-			posxini = posxini - 1;
-			posyini = posyini - 1;
+			origen.x = origen.x - 1;
+			origen.y = origen.y - 1;
 		}
 	}
 
@@ -118,11 +100,4 @@ void rey::movimientos(float posxfin, float posyfin)
 		cout << "MOVIMIENTO INCORRECTO. Prueba otra vez." << endl;
 }
 
-int rey::getturno() {
-	return turno;
-}
 
-void rey::setturno(int t)
-{
-	turno = t;
-}
