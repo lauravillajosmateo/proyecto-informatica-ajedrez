@@ -5,30 +5,21 @@
 
 using namespace std;
 
-peon::peon() {
-	rojo = verde = azul = 175;
-	posxini = posyini = 0;
-
-	avanza = 0;
-	come = 0;
-	turno = 0;
-
-}
-
-peon::peon(float x, float y, unsigned char r, unsigned char a, unsigned char v) {
-	rojo = r;
-	azul = a;
-	verde = v;
-	posxini = x;
-	posyini = y;
+peon::peon(Vector v, int c) {
+	
+	origen = v;
+	color = c;
 
 }
 
 void peon::dibuja() {
-	glColor3ub(rojo, verde, azul);
-	glTranslatef(posxini, posyini-0.37, 0.01);
+	
+	glTranslatef(origen.x, origen.y-0.37, 0.01);
 	glEnable(GL_TEXTURE_2D);
-	glBindTexture(GL_TEXTURE_2D, ETSIDI::getTexture("imagenes/peonB.png").id);
+	if(color==BLANCO)
+		glBindTexture(GL_TEXTURE_2D, ETSIDI::getTexture("imagenes/peonB.png").id);
+	else
+		glBindTexture(GL_TEXTURE_2D, ETSIDI::getTexture("imagenes/peonN.png").id);
 	glDisable(GL_LIGHTING);
 	glBegin(GL_POLYGON);
 	glColor3f(1, 1, 1);
@@ -39,80 +30,129 @@ void peon::dibuja() {
 	glEnd();
 	glEnable(GL_LIGHTING);
 	glDisable(GL_TEXTURE_2D);
-	glTranslatef(-posxini, -posyini+0.37, 0);
+	glTranslatef(-origen.x, -origen.y+0.37, 0);
+
 }
 
 
-int peon::mov_correcto(float posxfin, float posyfin) {
 
-	if (posyini == 6.5) {
-		if (posxfin == posxini && posyfin == posyini - 1 && avanza == 1) {
-			return AVANZA1;
+int peon::mov_correcto(Vector v) {
+
+	if (color == BLANCO)
+	{
+		if (origen.y == 7) {
+			if (v.x == origen.x && v.y == origen.y - 1 && avanza == 1) {
+				return AVANZA1;
+			}
+			else if (v.x == origen.x && v.y == origen.y - 2 && avanza == 1)
+				return AVANZA2;
+			else if (((v.x == origen.x - 1 && v.y == origen.y - 1) || (v.x == origen.x + 1 && v.y == origen.y - 1)) && come == 1)
+			{
+
+				return COME;
+			}
 		}
-		else if (posxfin == posxini && posyfin == posyini - 2 && avanza == 1)
-			return AVANZA2;
-		else if (((posxfin == posxini - 1 && posyfin == posyini - 1) || (posxfin == posxini + 1 && posyfin == posyini - 1)) && come == 1)
-		{
-			
+
+		else if (v.x == origen.x && v.y == origen.y - 1 && avanza == 1)
+			return AVANZA1;
+
+		else if (((v.x == origen.x - 1 && v.y == origen.y - 1) || (v.x == origen.x + 1 && v.y == origen.y - 1)) && come == 1) {
+
 			return COME;
 		}
+		else {
+			cout << "MOVIMIENTO INCORRECTO. Prueba otra vez." << endl;
+			return ERROR;
+
+		}
 	}
 
-	else if (posxfin == posxini && posyfin == posyini - 1 && avanza == 1)
-		return AVANZA1;
-
-	else if (((posxfin == posxini - 1 && posyfin == posyini - 1) || (posxfin == posxini + 1 && posyfin == posyini - 1)) && come == 1) {
-		
-		return COME;
-	}
-	else {
-		cout << "MOVIMIENTO INCORRECTO. Prueba otra vez." << endl;
-		return ERROR;
-
-	}
-}
-
-
-void peon::mueve(float posxfin, float posyfin) {
-
-	movimientos(posxfin, posyfin);
-}
-
-
-
-
-
-void peon::movimientos(float posxfin, float posyfin) {
-	switch (mov_correcto(posxfin, posyfin)) {
-	case (AVANZA1):
+	else
 	{
-		turno = 1;
+		if (origen.y == 2) {
+			if (v.x == origen.x && v.y == origen.y + 1 && avanza == 1)
+				return AVANZA1;
+			else if (v.x == origen.x && v.y == origen.y + 2 && avanza == 1)
+				return AVANZA2;
+			else if (((v.x == origen.x + 1 && v.y == origen.y + 1) || (v.x == origen.x - 1 && v.y == origen.y + 1)) && come == 1) {
 
-		posyini = posyini - 1;
-		break;
+				return COME;
+			}
 
-	}
+		}
+		else if (v.x == origen.x && v.y == origen.y + 1 && avanza == 1)
+			return AVANZA1;
+		else if (((v.x == origen.x + 1 && v.y == origen.y + 1) || (v.x == origen.x - 1 && v.y == origen.y + 1)) && come == 1) {
 
-	case (AVANZA2):
-	{
-		turno = 1;
-		posyini = posyini - 2;
-		break;
-	}
-
-	case (COME):
-	{
-		turno = 1;
-
-		posxini = posxfin;
-		posyini = posyfin;
-		break;
-	}
-
+			return COME;
+		}
+		else {
+			cout << "MOVIMIENTO INCORRECTO. Prueba otra vez." << endl;
+			return ERROR;
+		}
 	}
 }
 
 
-int peon::getturno() {
-	return turno;
+
+void peon::movimientos(Vector v) {
+
+	if (color == BLANCO)
+	{
+		switch (mov_correcto(v)) {
+		case (AVANZA1):
+		{
+			turno = 1;
+
+			origen.y = origen.y - 1;
+			break;
+
+		}
+
+		case (AVANZA2):
+		{
+			turno = 1;
+			origen.y = origen.y - 2;
+			break;
+		}
+
+		case (COME):
+		{
+			turno = 1;
+
+			origen.x = v.x;
+			origen.y = v.y;
+			break;
+		}
+
+		}
+	}
+	else
+	{
+		switch (mov_correcto(v)) {
+		case (AVANZA1):
+		{
+			turno = 1;
+			origen.y = origen.y + 1;
+			break;
+		}
+
+		case (AVANZA2):
+		{
+			turno = 1;
+			origen.y = origen.y + 2;
+			break;
+		}
+
+		case (COME):
+		{
+			turno = 1;
+			origen.x = v.x;
+			origen.y = v.y;
+			break;
+		}
+
+		}
+	}
 }
+
