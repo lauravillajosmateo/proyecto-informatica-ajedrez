@@ -28,7 +28,7 @@ void torre::dibuja() {
     glEnd();
     glEnable(GL_LIGHTING);
     glDisable(GL_TEXTURE_2D);
-    glTranslatef(-posxini, -posyini, 0);
+    glTranslatef(-origen.x, -origen.y, 0);
 }
 
 
