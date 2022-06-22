@@ -1,28 +1,17 @@
 #include "reina.h"
 #include"freeglut.h"
 #include <iostream>
-#include"ETSIDI.h"
 
 using namespace std;
 
-
-reina::reina() {
-    rojo = verde = azul = 175;
-    posxini = posyini = 0;
-    turno = 0;
-}
-
-reina::reina(float x, float y, unsigned char r, unsigned char a, unsigned char v) {
-    rojo = r;
-    azul = a;
-    verde = v;
-    posxini = x;
-    posyini = y;
+reina::reina(Vector preina, int c) {
+    origen=preina;
+    color=c;
 }
 
 void reina::dibuja() {
-    glColor3ub(rojo, verde, azul);
-    glTranslatef(posxini, posyini, 0);
+
+    glTranslatef(origen.x, origen.y, 0);
     glEnable(GL_TEXTURE_2D);
     glBindTexture(GL_TEXTURE_2D, ETSIDI::getTexture("imagenes/reinaB.png").id);
     glDisable(GL_LIGHTING);
@@ -35,28 +24,28 @@ void reina::dibuja() {
     glEnd();
     glEnable(GL_LIGHTING);
     glDisable(GL_TEXTURE_2D);
-    glTranslatef(-posxini, -posyini, 0);
+    glTranslatef(-origen.x, -origen.y, 0);
 }
 
 
 
-int reina::mov_correcto(float posxfin, float posyfin)
+int reina::mov_correcto(Vector v)
 {
     //parte de la torre
-    if ((posxfin == posxini) && (posyfin == posyini)) {
+    if ((v.x == origen.x) && (v.y == origen.y)) {
         return ERROR;
     }
 
-    else if ((posxfin > posxini) && (posyfin < posyini) || (posxfin < posxini) && (posyfin > posyini)) {
-        if (posxfin + posyfin == posxini + posyini) {
+    else if ((v.x > origen.x) && (v.y < origen.y) || (v.x < origen.x) && (v.y > origen.y)) {
+        if (v.x + v.y == origen.x + origen.y) {
             return MOVIMIENTO_CORRECTO;
 
         }
         else
             return ERROR;
     }
-    else if ((posxfin < posxini) && (posyfin < posyini) || (posxfin > posxini) && (posyfin > posyini)) {
-        if (posyfin - posxfin == posyini - posxini) {
+    else if ((v.x < origen.x) && (v.y < origen.y) || (v.x > origen.x) && (v.y > origen.y)) {
+        if (v.y - v.x == origen.y - origen.x) {
             return MOVIMIENTO_CORRECTO;
 
         }
@@ -64,7 +53,7 @@ int reina::mov_correcto(float posxfin, float posyfin)
             return ERROR;
     }
     else {
-        if ((posxfin == posxini) || (posyfin == posyini)) {
+        if ((v.x == origen.x) || (v.y == origen.y)) {
             return MOVIMIENTO_CORRECTO;
         }
         else {
@@ -74,93 +63,77 @@ int reina::mov_correcto(float posxfin, float posyfin)
     }
 }
 
-void reina::movimientos(float posxfin, float posyfin)
+void reina::movimientos(Vector v)
 {
     //parte torre
-    if (mov_correcto(posxfin, posyfin) == 1) {
+    if (mov_correcto(v) == 1) {
 
         turno = 1;
-        if ((posxfin == posxini) && (posyfin > posyini))//mover arriba
+        if ((v.x == origen.x) && (v.y > origen.y))//mover arriba
         {
             do {
-                posyini = posyini + 1;
-            } while (posyini != posyfin);
+                origen.y = origen.y + 1;
+            } while (origen.y != v.y);
         }
-        else if ((posxfin == posxini) && (posyfin < posyini))//mover abajo
+        else if ((v.x == origen.x) && (v.y < origen.y))//mover abajo
         {
             do {
-                posyini = posyini - 1;
-            } while (posyini != posyfin);
+                origen.y = origen.y - 1;
+            } while (origen.y != v.y);
         }
-        else if ((posxfin > posxini) && (posyfin == posyini))//mover derecha
+        else if ((v.x > origen.x) && (v.y == origen.y))//mover derecha
         {
             do {
-                posxini = posxini + 1;
-            } while (posxini != posxfin);
+                origen.x = origen.x + 1;
+            } while (origen.x != v.x);
         }
-        else if ((posxfin < posxini) && (posyfin == posyini))//mover izquierda
+        else if ((v.x < origen.x) && (v.y == origen.y))//mover izquierda
         {
             do {
-                posxini = posxini - 1;
-            } while (posxini != posxfin);
+                origen.x = origen.x - 1;
+            } while (origen.x != v.x);
         }
 
         //parte alfil
 
-        if (posxfin > posxini && posyfin > posyini) {
+        if (v.x > origen.x && v.y > origen.y) {
             do { //movimiento arriba-derecha
 
-                posxini = posxini + 1;
-                posyini = posyini + 1;
+                origen.x = origen.x + 1;
+                origen.y = origen.y + 1;
 
-            } while (posxini != posxfin && posyini != posyfin);
+            } while (origen.x != v.x && origen.y != v.y);
         }
 
-        else if (posxfin < posxini && posyfin < posyini) {
+        else if (v.x < origen.x && v.y < origen.y) {
             do { //movimiento abajo-izquierda
 
-                posxini = posxini - 1;
-                posyini = posyini - 1;
+                origen.x = origen.x - 1;
+                origen.y = origen.y - 1;
 
 
-            } while (posxini != posxfin && posyini != posyfin);
+            } while (origen.x != v.x && origen.y != v.y);
         }
 
-        else if (posxfin < posxini && posyfin > posyini) {
+        else if (v.x < origen.x && v.y > origen.y) {
             do { //arriba-izquierda
 
-                posxini = posxini - 1; //posxini es la posicion en x donde estamos en ese mometno de comparar
-                posyini = posyini + 1;
+                origen.x = origen.x - 1; 
+                origen.y = origen.y + 1;
 
-            } while (posxini != posxfin && posyini != posyfin);
+            } while (origen.x != v.x && origen.y != v.y);
         }
 
-        else if (posxfin > posxini && posyfin < posyini) {
+        else if (v.x > origen.x && v.y < origen.y) {
             do { //abajo-derecha
 
-                posxini = posxini + 1; //posxini es la posicion en x donde estamos en ese mometno de comparar
-                posyini = posyini - 1;
+                origen.x = origen.x + 1; 
+                origen.y = origen.y - 1;
 
-            } while (posxini != posxfin && posyini != posyfin);
+            } while (origen.x != v.x && origen.y != v.y);
         }
     }
     else
         cout << "MOVIMIENTO INCORRECTO. Prueba otra vez." << endl;
 }
 
-void reina::mueve(float posxinif, float posyinif, float posxfinf, float posyfinf)
-{
-    if (posxinif == posxini && posyinif == posyini)
-        movimientos(posxfinf, posyfinf);
-
-
-}
-
-int reina::getturno() {
-    return turno;
-}
-
-void reina::setturno(int t)
-{
-    turno = t;
-}
