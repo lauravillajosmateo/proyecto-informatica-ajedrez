@@ -17,7 +17,10 @@ void caballo::dibuja() {
 	
 	glTranslatef(origen.x, origen.y, 0);
 	glEnable(GL_TEXTURE_2D);
-	glBindTexture(GL_TEXTURE_2D, ETSIDI::getTexture("imagenes/caballoB.png").id);
+	if(color==BLANCO)
+		glBindTexture(GL_TEXTURE_2D, ETSIDI::getTexture("imagenes/caballoB.png").id);
+	else
+		glBindTexture(GL_TEXTURE_2D, ETSIDI::getTexture("imagenes/caballoN.png").id);
 	glDisable(GL_LIGHTING);
 	glBegin(GL_POLYGON);
 	glColor3f(1, 1, 1);
