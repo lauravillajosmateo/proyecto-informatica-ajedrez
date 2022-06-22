@@ -8,15 +8,12 @@ class caballo:public Pieza
 private:
 
 public:
-	caballo();
-	caballo(float x, float y, unsigned char r, unsigned char a, unsigned char v);
+	caballo():Pieza(){}
+	caballo(Vector  pcaballo, int c);
 	void dibuja();
 
-	void movimientos(float posxfin, float posyfin);
-	int mov_correcto(float posxfin, float posyfin);
-	void mueve(float posxinif, float posyinif, float posxfinf, float posyfinf);
-	int getturno();
-
-	void setturno(int t);
+	void movimientos(Vector);
+	int mov_correcto(Vector);
+	
 
 };
