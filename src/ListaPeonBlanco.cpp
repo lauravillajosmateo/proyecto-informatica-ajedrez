@@ -27,12 +27,12 @@ void ListaPeonBlanco::cambiavanza(int indice)
 	lista[indice]->avanza = 1;
 }
 
-int ListaPeonBlanco::compara(float px, float py)
+int ListaPeonBlanco::compara(Vector v)
 {
 	int j = 10;
 
 	for (int i = 0; i < numero; i++) {
-		if (lista[i]->getx() == px && lista[i]->gety() == py) { //si es igual, devuelve la posicion del peon que lo cumple cambiando el valor de j, (entre 0 y 7)
+		if (lista[i]->getpos()=v) { //si es igual, devuelve la posicion del peon que lo cumple cambiando el valor de j, (entre 0 y 7)
 			j = i;
 		}
 	}
@@ -48,19 +48,16 @@ bool ListaPeonBlanco::agregar(peon* p)
 	}
 
 	if (numero < MAX_PEON)
-		lista[numero++] = p; // último puesto sin rellenar
+		lista[numero++] = p; // Ãºltimo puesto sin rellenar
 	else
-		return false; // capacidad máxima alcanzada
+		return false; // capacidad mÃ¡xima alcanzada
 	return true;
 }
 
-void ListaPeonBlanco::mueve(float posxf, float posyf, float posxfinf, float posyfinf)
+void ListaPeonBlanco::mueve(Vector inicio, Vector fin)
 {
 	for (int i = 0; i < numero; i++) {
-		if (lista[i]->getx() == posxf && lista[i]->gety() == posyf) {
-			lista[i]->mueve(posxfinf, posyfinf);
-
-		}
+		lista[i]->mueve(inicio, fin);
 		lista[i]->avanza = 0;
 		lista[i]->come = 0; //una vez se ha movido la pieza se vuelve a inicializar a 0 para volver a comprobar
 	}
