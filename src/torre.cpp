@@ -17,7 +17,10 @@ torre::torre(Vector ptorre, int c) {
 void torre::dibuja() {
     glTranslatef(origen.x, origen.y, 0);
     glEnable(GL_TEXTURE_2D);
-    glBindTexture(GL_TEXTURE_2D, ETSIDI::getTexture("imagenes/torreB.png").id);
+    if (color== BLANCO)
+        glBindTexture(GL_TEXTURE_2D, ETSIDI::getTexture("imagenes/torreB.png").id);
+    else
+        glBindTexture(GL_TEXTURE_2D, ETSIDI::getTexture("imagenes/torreN.png").id);
     glDisable(GL_LIGHTING);
     glBegin(GL_POLYGON);
     glColor3f(1, 1, 1);
