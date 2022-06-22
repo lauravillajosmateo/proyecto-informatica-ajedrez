@@ -38,7 +38,7 @@ int reina::mov_correcto(Vector v)
 
     else if ((v.x > origen.x) && (v.y < origen.y) || (v.x < origen.x) && (v.y > origen.y)) {
         if (v.x + v.y == origen.x + origen.y) {
-            return MOVIMIENTO_CORRECTO;
+            return MOV_CORRECTO;
 
         }
         else
@@ -46,7 +46,7 @@ int reina::mov_correcto(Vector v)
     }
     else if ((v.x < origen.x) && (v.y < origen.y) || (v.x > origen.x) && (v.y > origen.y)) {
         if (v.y - v.x == origen.y - origen.x) {
-            return MOVIMIENTO_CORRECTO;
+            return MOV_CORRECTO;
 
         }
         else
@@ -54,7 +54,7 @@ int reina::mov_correcto(Vector v)
     }
     else {
         if ((v.x == origen.x) || (v.y == origen.y)) {
-            return MOVIMIENTO_CORRECTO;
+            return MOV_CORRECTO;
         }
         else {
             return ERROR;
