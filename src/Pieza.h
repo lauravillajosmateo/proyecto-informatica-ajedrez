@@ -1,8 +1,12 @@
 #pragma once
 
+#include "ETSIDI.h"
 #include "Vector.h"
+
 #define MOV_CORRECTO 1
 #define ERROR 0 
+
+using namespace ETSIDI;
 
 typedef enum {BLANCO=0, NEGRO};
 
