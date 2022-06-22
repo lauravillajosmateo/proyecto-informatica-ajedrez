@@ -12,7 +12,7 @@ rey::rey(Vector prey, int c) {
 
 
 void rey::dibuja() {
-	glTranslatef(origen.x, origen.y, 0);
+	glTranslatef(origen.x, origen.y, 0.01);
 	glEnable(GL_TEXTURE_2D);
 	glBindTexture(GL_TEXTURE_2D, ETSIDI::getTexture("imagenes/reyB.png").id);
 	glDisable(GL_LIGHTING);
