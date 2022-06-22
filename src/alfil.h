@@ -1,11 +1,11 @@
 #pragma once
 
 
-#include "ETSIDI.h"
+
 #include "Pieza.h"
 
 
-using namespace ETSIDI;
+
 
 class alfil:public Pieza
 {
