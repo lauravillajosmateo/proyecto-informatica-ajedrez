@@ -151,8 +151,7 @@ void mundo::mueve()
 	cin >> posfin.x >> posfin.y;
 	fflush;
 
-	listapiezas.switchca(listapiezas.comprobar(posini), posfin);
-	if(listapiezas.getmover()==0)
+	if(listapiezas.switchca(listapiezas.comprobar(posini), posfin) ==0)
 	cout << "NO SE PUEDE REALIZAR EL MOVIMIENTO, HAY UNA PIEZA EN SU TRAYECTORIA" << endl;
 	else {
 	listapiezas.comerpeones(listapiezas.comprobar(posini), posfin);
