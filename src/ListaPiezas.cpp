@@ -1,5 +1,7 @@
 #include "ListaPiezas.h"
 
+using namespace std;
+
 ListaPiezas::ListaPiezas(){
   for(int i=0; i<MAX_PIEZAS; i++)
   {
