@@ -23,11 +23,10 @@ public:
       void mueve(Vector fin, Pieza* p);
   
       Pieza* comprobar(Vector);
-      void switchca(Pieza* p, Vector v);
+      int switchca(Pieza* p, Vector v);
   	  void comerpeones(Pieza* p, Vector v);
 	    void inicializarturnos();
 	    void cambiarturnos();
 	    void comer(Pieza* p, Vector v); 
-	    int getmover();
   
 };
