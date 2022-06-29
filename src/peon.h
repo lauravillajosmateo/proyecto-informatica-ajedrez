@@ -1,8 +1,8 @@
 #pragma once
 #define ERROR 0
-#define AVANZA1 1
+#define AVANZA1 3
 #define AVANZA2 2
-#define COME 3
+#define COME 1
 
 #include "Pieza.h"
 
