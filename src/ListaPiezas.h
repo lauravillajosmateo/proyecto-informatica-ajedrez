@@ -24,9 +24,12 @@ public:
   
       Pieza* comprobar(Vector);
       int switchca(Pieza* p, Vector v);
-  	  void comerpeones(Pieza* p, Vector v);
-	    void inicializarturnos();
-	    void cambiarturnos();
-	    void comer(Pieza* p, Vector v); 
+  	void comerpeones(Pieza* p, Vector v);
+	void inicializarturnos();
+	void cambiarturnos();
+	void comer(Pieza* p, Vector v); 
+	void dibujatblancas();
+	void dibujatnegras();
+	
   
 };
