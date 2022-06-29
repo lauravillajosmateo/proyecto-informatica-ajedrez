@@ -138,12 +138,7 @@ void ListaPiezas::comer(Pieza* p, Vector v) //vector de posicion final
 
 }
 
-int ListaPiezas::getmover()
-{
-	return mover;
-}
-
-void ListaPiezas::switchca(Pieza* p, Vector fin) {
+int ListaPiezas::switchca(Pieza* p, Vector fin) {
 
 	Vector aux = p->getpos();
 
@@ -468,10 +463,11 @@ void ListaPiezas::switchca(Pieza* p, Vector fin) {
 		break;
 	}
 
-	case 6: mover = 1;
-		break;
-
+	case 6:{ mover = 1;
+		break;}
+			
 	
 	}
+	return mover;
 
 }
