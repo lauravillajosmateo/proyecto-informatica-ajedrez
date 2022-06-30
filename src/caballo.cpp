@@ -37,6 +37,7 @@ void caballo::dibuja() {
 
 void caballo::movimientos(Vector v)
 {
+	if (mov_correcto(v) == 1 && turno == 0) {
 	if (mov_correcto(v) == 1) {
 
 		turno = 1;
@@ -114,6 +115,7 @@ void caballo::movimientos(Vector v)
 			} while (origen.x != v.x && origen.y != v.y);
 		}
 
+	}
 	}
 	else
 		cout << "MOVIMIENTO INCORRECTO. Prueba otra vez." << endl;
