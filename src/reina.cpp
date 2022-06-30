@@ -35,6 +35,7 @@ void reina::dibuja() {
 
 int reina::mov_correcto(Vector v)
 {
+    if (mov_correcto(v) == 1 && turno == 0) {
     //parte de la torre
     if ((v.x == origen.x) && (v.y == origen.y)) {
         return ERROR;
@@ -137,6 +138,7 @@ void reina::movimientos(Vector v)
             } while (origen.x != v.x && origen.y != v.y);
         }
     }
+}
     else
         cout << "MOVIMIENTO INCORRECTO. Prueba otra vez." << endl;
 }
