@@ -33,9 +33,10 @@ void reina::dibuja() {
 
 
 
-int reina::mov_correcto(Vector v)
+int reina::mov_correcto(Vector v, ListaPiezas l)
 {
-    if (mov_correcto(v) == 1 && turno == 0) {
+    Vector aux = origen;
+    int contador=0;
     //parte de la torre
     if ((v.x == origen.x) && (v.y == origen.y)) {
         return ERROR;
@@ -43,7 +44,7 @@ int reina::mov_correcto(Vector v)
 
     else if ((v.x > origen.x) && (v.y < origen.y) || (v.x < origen.x) && (v.y > origen.y)) {
         if (v.x + v.y == origen.x + origen.y) {
-            return MOV_CORRECTO;
+            contador++;
 
         }
         else
@@ -51,7 +52,7 @@ int reina::mov_correcto(Vector v)
     }
     else if ((v.x < origen.x) && (v.y < origen.y) || (v.x > origen.x) && (v.y > origen.y)) {
         if (v.y - v.x == origen.y - origen.x) {
-            return MOV_CORRECTO;
+            contador++;
 
         }
         else
@@ -59,19 +60,174 @@ int reina::mov_correcto(Vector v)
     }
     else {
         if ((v.x == origen.x) || (v.y == origen.y)) {
-            return MOV_CORRECTO;
+            contador++
         }
         else {
             return ERROR;
 
         }
     }
+        
+        //hacia arriba
+
+		if (v.x == p->getpos().x && v.y > p->getpos().y)
+		{
+			do
+			{
+				for (int i = 0; i < l.numero; i++) {
+					if (aux == l.lista[i]->getpos())
+					{
+						mover = 0;
+					}
+
+				}
+
+				aux.y++;
+			} while (aux.y != v.y);//mover 0 es que NO se puede mover
+		}
+
+		//hacia izquierda
+		if (v.x < p->getpos().x && v.y == p->getpos().y)
+		{
+			do
+			{
+				for (int i = 0; i < l.numero; i++) {
+					if (aux == l.lista[i]->getpos())
+					{
+						mover = 0;
+					}
+
+				}
+
+				aux.x--;
+			} while (aux.x != v.x);//mover 0 es que NO se puede mover
+		}
+
+		//hacia derecha
+		if (v.x > p->getpos().x && v.y == p->getpos().y)
+		{
+			do
+			{
+				for (int i = 0; i < l.numero; i++) {
+					if (aux == l.lista[i]->getpos())
+					{
+						mover = 0;
+					}
+
+				}
+
+				aux.x++;
+			} while (aux.x != v.x);//mover 0 es que NO se puede mover
+		}
+
+		//hacia abajo
+
+		if (v.x == p->getpos().x && v.y < p->getpos().y)
+		{
+			do
+			{
+				for (int i = 0; i < l.numero; i++) {
+					if (aux == l.lista[i]->getpos())
+					{
+						mover = 0;
+					}
+
+				}
+
+				aux.y--;
+			} while (aux.y != v.y);//mover 0 es que NO se puede mover
+		}
+		//arriba derecha
+
+		if (v.x > p->getpos().x && v.y > p->getpos().y)
+		{
+			do
+			{
+				for (int i = 0; i < l.numero; i++)
+				{
+					if (aux == l.lista[i]->getpos())
+					{
+						mover = 0;
+					}
+				}
+
+				aux.y++;
+				aux.x++;
+			} while (aux.x != v.x || aux.y != v.y);
+		}
+
+
+		//arriba izquierda
+		if (v.x < p->getpos().x && v.y > p->getpos().y)
+		{
+			do
+			{
+				for (int i = 0; i < l.numero; i++)
+				{
+					if (aux == l.lista[i]->getpos())
+					{
+						mover = 0;
+					}
+				}
+
+				aux.y++;
+				aux.x--;
+			} while (aux.x != v.x || aux.y != v.y);
+		}
+
+		//abajo derecha
+
+		if (v.x > p->getpos().x && v.y < p->getpos().y)
+		{
+			do
+			{
+				for (int i = 0; i < l.numero; i++)
+				{
+					if (aux == l.lista[i]->getpos())
+					{
+						mover = 0;
+					}
+				}
+
+				aux.y--;
+				aux.x++;
+			} while (aux.x != v.x || aux.y != v.y);
+		}
+
+		//abajo izquierda
+		if (v.x < p->getpos().x && v.y < p->getpos().y)
+		{
+			do
+			{
+				for (int i = 0; i < l.numero; i++)
+				{
+					if (aux == l.lista[i]->getpos())
+					{
+						mover = 0;
+					}
+				}
+
+				aux.y--;
+				aux.x--;
+			} while (aux.x != v.x || aux.y != v.y);
+        }
+        
+      if (mover == 0)
+        return ERROR;
+    else
+        contador++;
+    
+    if (Pieza::casillalibre(v, l) == 1)
+        contador++;
+
+    if (contador == 3)
+        return MOV_CORRECTO;    
 }
 
 void reina::movimientos(Vector v)
 {
     //parte torre
-    if (mov_correcto(v) == 1) {
+    if (mov_correcto(v) == 1 && turno==0) {
 
         turno = 1;
         if ((v.x == origen.x) && (v.y > origen.y))//mover arriba
