@@ -30,6 +30,7 @@ public:
 	void comer(Pieza* p, Vector v); 
 	void dibujatblancas();
 	void dibujatnegras();
-	
+	void hayjaque();
+	void jaquemate();
   
 };
