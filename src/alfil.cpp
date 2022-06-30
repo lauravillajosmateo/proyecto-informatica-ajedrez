@@ -56,6 +56,7 @@ int alfil::mov_correcto(Vector v)
 
 void alfil::movimientos(Vector v)
 {
+	if (mov_correcto(v) == 1 && turno==0) {
 	if (mov_correcto(v) == 1) {
 
 		if (v.x > origen.x && v.y > origen.y) {
@@ -97,8 +98,10 @@ void alfil::movimientos(Vector v)
 
 		turno = 1;
 	}
+	}
 	else
 		cout << "MOVIMIENTO INCORRECTO. Prueba otra vez." << endl;
+	
 }
 
 
