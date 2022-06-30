@@ -24,16 +24,13 @@ public:
 
 	Vector getpos();
 
-
 	virtual void dibuja() = 0;
 	void mueve(Vector inicio, Vector final);
 	virtual int mov_correcto(Vector ) = 0;
 	virtual void movimientos(Vector) = 0;
-
 	int getturno();
-
 	void setturno(int t);
-	
+	int casillalibre(Vector v, ListaPiezas l);
 
 
 };
