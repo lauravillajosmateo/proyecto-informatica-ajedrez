@@ -12,7 +12,7 @@ public:
 
 	void dibuja();
 
-	int mov_correcto(Vector);
+	int mov_correcto(Vector, ListaPiezas);
 	void movimientos(Vector);
 
 };
