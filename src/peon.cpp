@@ -37,6 +37,7 @@ void peon::dibuja() {
 
 
 int peon::mov_correcto(Vector v) {
+	if (mov_correcto(v) == 1 && turno == 0) {
 
 	if (color == BLANCO)
 	{
@@ -86,6 +87,7 @@ int peon::mov_correcto(Vector v) {
 
 			return COME;
 		}
+	}
 		else {
 			cout << "MOVIMIENTO INCORRECTO. Prueba otra vez." << endl;
 			return ERROR;
