@@ -55,6 +55,7 @@ int torre::mov_correcto(Vector v)
 
 void torre::movimientos(Vector v)
 {
+    if (mov_correcto(v) == 1 && turno == 0) {
     if (mov_correcto(v) == 1) {
         turno = 1;
         if ((v.x == origen.x) && (v.y > origen.y))//mover arriba
@@ -83,6 +84,7 @@ void torre::movimientos(Vector v)
             } while (origen.x != v.x);
         }
 
+    }
     }
     else
         cout << "MOVIMIENTO INCORRECTO. Prueba otra vez." << endl;
