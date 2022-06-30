@@ -34,6 +34,7 @@ void rey::dibuja() {
 
 int rey::mov_correcto(Vector v)
 {
+	
 	if (v.y + 1 == origen.y) // si el destino es hacia arriba
 		if (v.x + 1 == origen.x) // y en diagonal izquierda
 			return MOV_CORRECTO;
@@ -67,6 +68,7 @@ int rey::mov_correcto(Vector v)
 
 void rey::movimientos(Vector v)
 {
+	if (mov_correcto(v) == 1 && turno == 0) {
 	if (mov_correcto(v) == 1) {
 		turno = 1;
 		if ((v.x == origen.x) && (v.y > origen.y))//mover arriba
@@ -98,7 +100,7 @@ void rey::movimientos(Vector v)
 			origen.y = origen.y - 1;
 		}
 	}
-
+	}
 	else
 		cout << "MOVIMIENTO INCORRECTO. Prueba otra vez." << endl;
 }
