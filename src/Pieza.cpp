@@ -1,19 +1,5 @@
 #include "Pieza.h"
 
-Pieza::Pieza() {
-	origen.x = 0;
-	origen.y = 0;
-	turno = 0;
-	color = 0;
-}
-
-
-Pieza::Pieza(Vector v, int c, int m) {
-	origen = v;
-	color = c;
-	marca = m;
-}
-
 void Pieza::setpos(Vector posicion) {
 	origen = posicion;
 }
