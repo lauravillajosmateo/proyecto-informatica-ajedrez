@@ -1,10 +1,9 @@
 #pragma once
-
-#include "ETSIDI.h"
+#include "ListaPiezas.h"
 #include "Vector.h"
-
 #define MOV_CORRECTO 1
-#define ERROR 0 
+#define ERROR 0
+#include "ETSIDI.h"
 
 using namespace ETSIDI;
 
