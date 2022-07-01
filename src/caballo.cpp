@@ -35,10 +35,9 @@ void caballo::dibuja() {
 }
 
 
-void caballo::movimientos(Vector v)
+void caballo::movimientos(Vector v, ListaPiezas l)
 {
-	if (mov_correcto(v) == 1 && turno == 0) {
-	if (mov_correcto(v) == 1) {
+	if (mov_correcto(v,l) == 1 && turno == 0) {
 
 		turno = 1;
 
@@ -121,9 +120,18 @@ void caballo::movimientos(Vector v)
 		cout << "MOVIMIENTO INCORRECTO. Prueba otra vez." << endl;
 }
 
-int caballo::mov_correcto(Vector v)
+int caballo::mov_correcto(Vector v, ListaPiezas l)
 {
+	int contador=0;
 	if ((fabs(origen.x - v.x) == 1) && (fabs(origen.y - v.y) == 2) || ((fabs(origen.x - v.x) == 2) && (fabs(origen.y - v.y) == 1)))
+		contador++;
+	else
+		return ERROR;
+
+	if (Pieza::casillalibre(v, l) == 1)
+		contador++;
+
+	if (contador == 2)
 		return MOV_CORRECTO;
 	else
 		return ERROR;
