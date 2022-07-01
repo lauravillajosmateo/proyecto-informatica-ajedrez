@@ -17,17 +17,18 @@ protected:
 
 	int turno;
 	int color;
+	int mover;
 
 public:
 	Pieza();
+	Pieza(Vector v, int c, int m);
 	void setpos(Vector posicion);
 
 	Vector getpos();
 
 	virtual void dibuja() = 0;
-	void mueve(Vector inicio, Vector final);
-	virtual int mov_correcto(Vector ) = 0;
-	virtual void movimientos(Vector) = 0;
+	virtual int mov_correcto(Vector, ListaPiezas) = 0;
+	virtual void movimientos(Vector,ListaPiezas) = 0;
 	int getturno();
 	void setturno(int t);
 	int casillalibre(Vector v, ListaPiezas l);
