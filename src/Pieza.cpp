@@ -7,6 +7,13 @@ Pieza::Pieza() {
 	color = 0;
 }
 
+
+Pieza::Pieza(Vector v, int c, int m) {
+	origen = v;
+	color = c;
+	marca = m;
+}
+
 void Pieza::setpos(Vector posicion) {
 	origen = posicion;
 }
@@ -17,13 +24,6 @@ Vector Pieza::getpos()
 }
 
 
-
-
-void Pieza::mueve(Vector inicio, Vector fin)
-{
-	if (inicio = origen)
-		movimientos(fin);
-}
 
 int Pieza::getturno()
 {
