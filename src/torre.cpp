@@ -35,28 +35,116 @@ void torre::dibuja() {
 }
 
 
-int torre::mov_correcto(Vector v)
+
+int torre::mov_correcto(Vector v,ListaPiezas l) //movimiento valido por naturaleza de la pieza
 {
+    Vector aux = origen;
+    int contador = 0;
     if ((v.x == origen.x) && (v.y == origen.y)) {
         return ERROR;
     }
     else {
 
         if ((v.x == origen.x) || (v.y == origen.y)) {
-            return MOV_CORRECTO;
+            contador++;
+            
         }
         else {
             return ERROR;
         }
     }
+    //hacia arriba
+
+    if (v.x == origen.x && v.y >origen.y)
+    {
+        do
+        {
+            for (int i = 0; i < l.numero; i++) {
+                if (aux == l.lista[i]->getpos())
+                {
+                    mover = 0;
+                }
+
+            }
+
+            aux.y++;
+        } while (aux.y != v.y);//mover 0 es que NO se puede mover
+    }
+
+    //hacia izquierda
+    if (v.x <origen.x && v.y ==origen.y)
+    {
+        do
+        {
+            for (int i = 0; i < l.numero; i++) {
+                if (aux == l.lista[i]->getpos())
+                {
+                    mover = 0;
+                }
+
+            }
+
+            aux.x--;
+        } while (aux.x != v.x);//mover 0 es que NO se puede mover
+    }
+
+    //hacia derecha
+    if (v.x > origen.x && v.y == origen.y)
+    {
+        do
+        {
+            for (int i = 0; i < l.numero; i++) {
+                if (aux == l.lista[i]->getpos())
+                {
+                    mover = 0;
+                }
+
+            }
+
+            aux.x++;
+        } while (aux.x != v.x);//mover 0 es que NO se puede mover
+    }
+
+    //hacia abajo
+
+    if (v.x == origen.x && v.y < origen.y)
+    {
+        do
+        {
+            for (int i = 0; i < l.numero; i++) {
+                if (aux == l.lista[i]->getpos())
+                {
+                    mover = 0;
+                }
+
+            }
+
+            aux.y--;
+        } while (aux.y != v.y);//mover 0 es que NO se puede mover
+    }
+
+    if (mover == 0)
+        return ERROR;
+    else
+        contador++;
+    
+    if (Pieza::casillalibre(v, l) == 1)
+        contador++;
+    else
+        return ERROR;
+
+
+    if (contador == 3)
+        return MOV_CORRECTO;
+    
 
 
 }
 
-void torre::movimientos(Vector v)
+
+void torre::movimientos(Vector v, ListaPiezas l) 
 {
-    if (mov_correcto(v) == 1 && turno == 0) {
-    if (mov_correcto(v) == 1) {
+    if (mov_correcto(v,l) == 1 && turno==0) {
         turno = 1;
         if ((v.x == origen.x) && (v.y > origen.y))//mover arriba
         {
@@ -84,7 +172,6 @@ void torre::movimientos(Vector v)
             } while (origen.x != v.x);
         }
 
-    }
     }
     else
         cout << "MOVIMIENTO INCORRECTO. Prueba otra vez." << endl;
