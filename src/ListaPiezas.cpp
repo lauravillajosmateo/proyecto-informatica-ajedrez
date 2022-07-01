@@ -1,4 +1,5 @@
 #include "ListaPiezas.h"
+#include "Pieza.h"
 
 using namespace std;
 
