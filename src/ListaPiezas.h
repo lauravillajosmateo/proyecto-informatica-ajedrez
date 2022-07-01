@@ -1,15 +1,10 @@
 #pragma once
 #define MAX_PIEZAS 35
-#include "Pieza.h"
-#include "ListaPeonBlanco.h"
-#include "rey.h"
-#include "alfil.h"
-#inlclude "caballo.h"
-#include "reina.h"
-#include "torre.h"
+
 #include "Vector.h"
 #include <iostream>
 
+class Pieza;
 class ListaPiezas{
   
   Pieza* lista[MAX_PIEZAS];
