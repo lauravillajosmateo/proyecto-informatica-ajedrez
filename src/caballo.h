@@ -12,8 +12,8 @@ public:
 	caballo(Vector  pcaballo, int c);
 	void dibuja();
 
-	void movimientos(Vector);
-	int mov_correcto(Vector);
+	void movimientos(Vector,ListaPiezas);
+	int mov_correcto(Vector,ListaPiezas);
 	
 
 };
