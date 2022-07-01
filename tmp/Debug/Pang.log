@@ -1,0 +1,631 @@
+﻿  alfil.cpp
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(5,25): error C2504: 'Pieza': clase base sin definir
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(10,6): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(10,5): error C2535: 'rey::rey(void)': función miembro ya definida o declarada
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(9): message : vea la declaración de 'rey::rey'
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(12,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(13,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(9,9): error C2614: 'rey': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(10,33): error C2065: 'prey': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(10,39): error C2065: 'c': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(10,42): error C2065: 'REY': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(10,27): error C2614: 'rey': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(7,1): error C2504: 'Pieza': clase base sin definir
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(12,10): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(12,9): error C2535: 'caballo::caballo(void)': función miembro ya definida o declarada
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(11): message : vea la declaración de 'caballo::caballo'
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(15,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(16,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(11,13): error C2614: 'caballo': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(12,41): error C2065: 'pcaballo': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(12,51): error C2065: 'c': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(12,54): error C2065: 'CABALLO': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(12,35): error C2614: 'caballo': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(6,1): error C2504: 'Pieza': clase base sin definir
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(11,8): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(11,7): error C2535: 'reina::reina(void)': función miembro ya definida o declarada
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(10): message : vea la declaración de 'reina::reina'
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(15,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(16,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(10,11): error C2614: 'reina': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(11,37): error C2065: 'preina': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(11,45): error C2065: 'c': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(11,48): error C2065: 'REINA': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(11,31): error C2614: 'reina': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(7,1): error C2504: 'Pieza': clase base sin definir
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(12,8): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(12,7): error C2535: 'torre::torre(void)': función miembro ya definida o declarada
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(11): message : vea la declaración de 'torre::torre'
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(16,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(17,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(11,11): error C2614: 'torre': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(12,37): error C2065: 'ptorre': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(12,45): error C2065: 'c': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(12,48): error C2065: 'TORRE': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(12,31): error C2614: 'torre': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(16,7): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(16,7): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(16,26): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(22,15): error C2061: error de sintaxis: identificador 'Pieza'
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(26,7): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(26,7): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(26,26): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(31,13): error C2061: error de sintaxis: identificador 'Pieza'
+C:\Users\Susana\Downloads\AJEFOTO30\src\Pieza.h(10,35): warning C4091: 'typedef ': se ha omitido a la izquierda de '<unnamed-enum-BLANCO>' cuando no hay ninguna variable declarada
+C:\Users\Susana\Downloads\AJEFOTO30\src\Pieza.h(11,61): warning C4091: 'typedef ': se ha omitido a la izquierda de '<unnamed-enum-PEON>' cuando no hay ninguna variable declarada
+C:\Users\Susana\Downloads\AJEFOTO30\src\Pieza.h(45,4): error C2014: el comando de preprocesador debe empezar con un primer espacio que no esté en blanco
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.cpp(10,31): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.cpp(10,21): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.cpp(19,40): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.cpp(20,39): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.cpp(21,41): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.cpp(22,42): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.cpp(26,26): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.cpp(26,15): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.cpp(63,18): error C2039: "lista": no es un miembro de "ListaPiezas"
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(14): message : vea la declaración de 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.cpp(82,18): error C2039: "lista": no es un miembro de "ListaPiezas"
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(14): message : vea la declaración de 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.cpp(101,18): error C2039: "lista": no es un miembro de "ListaPiezas"
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(14): message : vea la declaración de 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.cpp(119,18): error C2039: "lista": no es un miembro de "ListaPiezas"
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(14): message : vea la declaración de 'ListaPiezas'
+  caballo.cpp
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(5,25): error C2504: 'Pieza': clase base sin definir
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(10,6): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(10,5): error C2535: 'rey::rey(void)': función miembro ya definida o declarada
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(9): message : vea la declaración de 'rey::rey'
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(12,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(13,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(9,9): error C2614: 'rey': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(10,33): error C2065: 'prey': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(10,39): error C2065: 'c': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(10,42): error C2065: 'REY': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(10,27): error C2614: 'rey': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(11,1): error C2504: 'Pieza': clase base sin definir
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(17,8): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(17,7): error C2535: 'alfil::alfil(void)': función miembro ya definida o declarada
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(16): message : vea la declaración de 'alfil::alfil'
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(21,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(22,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(16,11): error C2614: 'alfil': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(17,36): error C2065: 'palfil': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(17,44): error C2065: 'c': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(17,47): error C2065: 'ALFIL': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(17,30): error C2614: 'alfil': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(6,1): error C2504: 'Pieza': clase base sin definir
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(11,8): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(11,7): error C2535: 'reina::reina(void)': función miembro ya definida o declarada
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(10): message : vea la declaración de 'reina::reina'
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(15,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(16,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(10,11): error C2614: 'reina': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(11,37): error C2065: 'preina': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(11,45): error C2065: 'c': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(11,48): error C2065: 'REINA': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(11,31): error C2614: 'reina': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(7,1): error C2504: 'Pieza': clase base sin definir
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(12,8): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(12,7): error C2535: 'torre::torre(void)': función miembro ya definida o declarada
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(11): message : vea la declaración de 'torre::torre'
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(16,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(17,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(11,11): error C2614: 'torre': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(12,37): error C2065: 'ptorre': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(12,45): error C2065: 'c': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(12,48): error C2065: 'TORRE': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(12,31): error C2614: 'torre': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(16,7): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(16,7): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(16,26): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(22,15): error C2061: error de sintaxis: identificador 'Pieza'
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(26,7): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(26,7): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(26,26): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(31,13): error C2061: error de sintaxis: identificador 'Pieza'
+C:\Users\Susana\Downloads\AJEFOTO30\src\Pieza.h(10,35): warning C4091: 'typedef ': se ha omitido a la izquierda de '<unnamed-enum-BLANCO>' cuando no hay ninguna variable declarada
+C:\Users\Susana\Downloads\AJEFOTO30\src\Pieza.h(11,61): warning C4091: 'typedef ': se ha omitido a la izquierda de '<unnamed-enum-PEON>' cuando no hay ninguna variable declarada
+C:\Users\Susana\Downloads\AJEFOTO30\src\Pieza.h(45,4): error C2014: el comando de preprocesador debe empezar con un primer espacio que no esté en blanco
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.cpp(10,42): error C2084: la función 'caballo::caballo(Vector,int)' ya tiene un cuerpo
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(12): message : vea la definición anterior de '{ctor}'
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.cpp(18,31): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.cpp(18,21): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.cpp(27,40): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.cpp(28,39): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.cpp(29,41): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.cpp(30,42): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.cpp(34,26): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.cpp(34,15): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
+  ListaPiezas.cpp
+C:\Users\Susana\Downloads\AJEFOTO30\src\Pieza.h(10,35): warning C4091: 'typedef ': se ha omitido a la izquierda de '<unnamed-enum-BLANCO>' cuando no hay ninguna variable declarada
+C:\Users\Susana\Downloads\AJEFOTO30\src\Pieza.h(11,61): warning C4091: 'typedef ': se ha omitido a la izquierda de '<unnamed-enum-PEON>' cuando no hay ninguna variable declarada
+C:\Users\Susana\Downloads\AJEFOTO30\src\Pieza.h(33,35): error C2061: error de sintaxis: identificador 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\Pieza.h(34,35): error C2061: error de sintaxis: identificador 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\Pieza.h(42,29): error C2061: error de sintaxis: identificador 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\Pieza.h(45,4): error C2014: el comando de preprocesador debe empezar con un primer espacio que no esté en blanco
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(12,26): error C2061: error de sintaxis: identificador 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(13,26): error C2061: error de sintaxis: identificador 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(21,26): error C2061: error de sintaxis: identificador 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(22,27): error C2061: error de sintaxis: identificador 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(15,26): error C2061: error de sintaxis: identificador 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(16,26): error C2061: error de sintaxis: identificador 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(15,26): error C2061: error de sintaxis: identificador 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(16,26): error C2061: error de sintaxis: identificador 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(16,26): error C2061: error de sintaxis: identificador 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(17,27): error C2061: error de sintaxis: identificador 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.cpp(270,39): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.cpp(273,26): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.cpp(276,32): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.cpp(276,26): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.cpp(282,32): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.cpp(282,26): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.cpp(285,33): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.cpp(285,27): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.cpp(288,32): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.cpp(288,26): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.cpp(291,33): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.cpp(291,27): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.cpp(294,32): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.cpp(294,26): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.cpp(297,31): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.cpp(297,25): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.cpp(307,40): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.cpp(310,26): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.cpp(313,32): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.cpp(313,26): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.cpp(319,32): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.cpp(319,26): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.cpp(322,33): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.cpp(322,27): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.cpp(325,32): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.cpp(325,26): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.cpp(328,33): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.cpp(328,27): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.cpp(331,32): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.cpp(331,26): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.cpp(334,31): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.cpp(334,25): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+  main.cpp
+C:\Users\Susana\Downloads\AJEFOTO30\src\Pieza.h(10,35): warning C4091: 'typedef ': se ha omitido a la izquierda de '<unnamed-enum-BLANCO>' cuando no hay ninguna variable declarada
+C:\Users\Susana\Downloads\AJEFOTO30\src\Pieza.h(11,61): warning C4091: 'typedef ': se ha omitido a la izquierda de '<unnamed-enum-PEON>' cuando no hay ninguna variable declarada
+C:\Users\Susana\Downloads\AJEFOTO30\src\Pieza.h(33,35): error C2061: error de sintaxis: identificador 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\Pieza.h(34,35): error C2061: error de sintaxis: identificador 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\Pieza.h(42,29): error C2061: error de sintaxis: identificador 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\Pieza.h(45,4): error C2014: el comando de preprocesador debe empezar con un primer espacio que no esté en blanco
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(12,26): error C2061: error de sintaxis: identificador 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(13,26): error C2061: error de sintaxis: identificador 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(21,26): error C2061: error de sintaxis: identificador 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(22,27): error C2061: error de sintaxis: identificador 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(15,26): error C2061: error de sintaxis: identificador 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(16,26): error C2061: error de sintaxis: identificador 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(15,26): error C2061: error de sintaxis: identificador 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(16,26): error C2061: error de sintaxis: identificador 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(16,26): error C2061: error de sintaxis: identificador 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(17,27): error C2061: error de sintaxis: identificador 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\main.cpp(88,9): error C2039: "tecla": no es un miembro de "mundo"
+C:\Users\Susana\Downloads\AJEFOTO30\src\mundo.h(13): message : vea la declaración de 'mundo'
+  mundo.cpp
+C:\Users\Susana\Downloads\AJEFOTO30\src\Pieza.h(10,35): warning C4091: 'typedef ': se ha omitido a la izquierda de '<unnamed-enum-BLANCO>' cuando no hay ninguna variable declarada
+C:\Users\Susana\Downloads\AJEFOTO30\src\Pieza.h(11,61): warning C4091: 'typedef ': se ha omitido a la izquierda de '<unnamed-enum-PEON>' cuando no hay ninguna variable declarada
+C:\Users\Susana\Downloads\AJEFOTO30\src\Pieza.h(33,35): error C2061: error de sintaxis: identificador 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\Pieza.h(34,35): error C2061: error de sintaxis: identificador 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\Pieza.h(42,29): error C2061: error de sintaxis: identificador 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\Pieza.h(45,4): error C2014: el comando de preprocesador debe empezar con un primer espacio que no esté en blanco
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(12,26): error C2061: error de sintaxis: identificador 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(13,26): error C2061: error de sintaxis: identificador 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(21,26): error C2061: error de sintaxis: identificador 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(22,27): error C2061: error de sintaxis: identificador 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(15,26): error C2061: error de sintaxis: identificador 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(16,26): error C2061: error de sintaxis: identificador 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(15,26): error C2061: error de sintaxis: identificador 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(16,26): error C2061: error de sintaxis: identificador 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(16,26): error C2061: error de sintaxis: identificador 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(17,27): error C2061: error de sintaxis: identificador 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\mundo.cpp(29): error C2259: "peon": no se puede crear una instancia de una clase abstract
+C:\Users\Susana\Downloads\AJEFOTO30\src\peon.h(9): message : vea la declaración de 'peon'
+C:\Users\Susana\Downloads\AJEFOTO30\src\mundo.cpp(29): message : debido a los siguientes miembros:
+C:\Users\Susana\Downloads\AJEFOTO30\src\mundo.cpp(29): message : 'int Pieza::mov_correcto(Vector)': es abstracto
+C:\Users\Susana\Downloads\AJEFOTO30\src\Pieza.h(33): message : vea la declaración de 'Pieza::mov_correcto'
+C:\Users\Susana\Downloads\AJEFOTO30\src\mundo.cpp(29): message : 'void Pieza::movimientos(Vector)': es abstracto
+C:\Users\Susana\Downloads\AJEFOTO30\src\Pieza.h(34): message : vea la declaración de 'Pieza::movimientos'
+C:\Users\Susana\Downloads\AJEFOTO30\src\mundo.cpp(29,24): error C2259: "peon": no se puede crear una instancia de una clase abstract
+C:\Users\Susana\Downloads\AJEFOTO30\src\peon.h(9): message : vea la declaración de 'peon'
+C:\Users\Susana\Downloads\AJEFOTO30\src\mundo.cpp(29,24): message : debido a los siguientes miembros:
+C:\Users\Susana\Downloads\AJEFOTO30\src\mundo.cpp(29,24): message : 'int Pieza::mov_correcto(Vector)': es abstracto
+C:\Users\Susana\Downloads\AJEFOTO30\src\Pieza.h(33): message : vea la declaración de 'Pieza::mov_correcto'
+C:\Users\Susana\Downloads\AJEFOTO30\src\mundo.cpp(29,24): message : 'void Pieza::movimientos(Vector)': es abstracto
+C:\Users\Susana\Downloads\AJEFOTO30\src\Pieza.h(34): message : vea la declaración de 'Pieza::movimientos'
+C:\Users\Susana\Downloads\AJEFOTO30\src\mundo.cpp(36): error C2259: "peon": no se puede crear una instancia de una clase abstract
+C:\Users\Susana\Downloads\AJEFOTO30\src\peon.h(9): message : vea la declaración de 'peon'
+C:\Users\Susana\Downloads\AJEFOTO30\src\mundo.cpp(36): message : debido a los siguientes miembros:
+C:\Users\Susana\Downloads\AJEFOTO30\src\mundo.cpp(36): message : 'int Pieza::mov_correcto(Vector)': es abstracto
+C:\Users\Susana\Downloads\AJEFOTO30\src\Pieza.h(33): message : vea la declaración de 'Pieza::mov_correcto'
+C:\Users\Susana\Downloads\AJEFOTO30\src\mundo.cpp(36): message : 'void Pieza::movimientos(Vector)': es abstracto
+C:\Users\Susana\Downloads\AJEFOTO30\src\Pieza.h(34): message : vea la declaración de 'Pieza::movimientos'
+C:\Users\Susana\Downloads\AJEFOTO30\src\mundo.cpp(133,49): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\Susana\Downloads\AJEFOTO30\src\mundo.cpp(134,50): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\Susana\Downloads\AJEFOTO30\src\mundo.cpp(135,49): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\Susana\Downloads\AJEFOTO30\src\mundo.cpp(136,48): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\Susana\Downloads\AJEFOTO30\src\mundo.cpp(178,2): warning C4551: la llamada a la función no tiene lista de argumentos
+C:\Users\Susana\Downloads\AJEFOTO30\src\mundo.cpp(182,2): warning C4551: la llamada a la función no tiene lista de argumentos
+C:\Users\Susana\Downloads\AJEFOTO30\src\mundo.cpp(185,36): error C2660: 'Pieza::movimientos': la función no acepta 2 argumentos
+C:\Users\Susana\Downloads\AJEFOTO30\src\Pieza.h(34,15): message : vea la declaración de 'Pieza::movimientos'
+  peon.cpp
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(5,25): error C2504: 'Pieza': clase base sin definir
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(10,6): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(10,5): error C2535: 'rey::rey(void)': función miembro ya definida o declarada
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(9): message : vea la declaración de 'rey::rey'
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(12,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(13,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(9,9): error C2614: 'rey': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(10,33): error C2065: 'prey': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(10,39): error C2065: 'c': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(10,42): error C2065: 'REY': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(10,27): error C2614: 'rey': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(11,1): error C2504: 'Pieza': clase base sin definir
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(17,8): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(17,7): error C2535: 'alfil::alfil(void)': función miembro ya definida o declarada
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(16): message : vea la declaración de 'alfil::alfil'
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(21,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(22,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(16,11): error C2614: 'alfil': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(17,36): error C2065: 'palfil': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(17,44): error C2065: 'c': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(17,47): error C2065: 'ALFIL': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(17,30): error C2614: 'alfil': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(7,1): error C2504: 'Pieza': clase base sin definir
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(12,10): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(12,9): error C2535: 'caballo::caballo(void)': función miembro ya definida o declarada
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(11): message : vea la declaración de 'caballo::caballo'
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(15,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(16,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(11,13): error C2614: 'caballo': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(12,41): error C2065: 'pcaballo': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(12,51): error C2065: 'c': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(12,54): error C2065: 'CABALLO': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(12,35): error C2614: 'caballo': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(6,1): error C2504: 'Pieza': clase base sin definir
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(11,8): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(11,7): error C2535: 'reina::reina(void)': función miembro ya definida o declarada
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(10): message : vea la declaración de 'reina::reina'
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(15,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(16,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(10,11): error C2614: 'reina': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(11,37): error C2065: 'preina': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(11,45): error C2065: 'c': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(11,48): error C2065: 'REINA': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(11,31): error C2614: 'reina': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(7,1): error C2504: 'Pieza': clase base sin definir
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(12,8): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(12,7): error C2535: 'torre::torre(void)': función miembro ya definida o declarada
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(11): message : vea la declaración de 'torre::torre'
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(16,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(17,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(11,11): error C2614: 'torre': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(12,37): error C2065: 'ptorre': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(12,45): error C2065: 'c': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(12,48): error C2065: 'TORRE': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(12,31): error C2614: 'torre': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(16,7): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(16,7): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(16,26): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(22,15): error C2061: error de sintaxis: identificador 'Pieza'
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(26,7): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(26,7): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(26,26): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(31,13): error C2061: error de sintaxis: identificador 'Pieza'
+C:\Users\Susana\Downloads\AJEFOTO30\src\Pieza.h(10,35): warning C4091: 'typedef ': se ha omitido a la izquierda de '<unnamed-enum-BLANCO>' cuando no hay ninguna variable declarada
+C:\Users\Susana\Downloads\AJEFOTO30\src\Pieza.h(11,61): warning C4091: 'typedef ': se ha omitido a la izquierda de '<unnamed-enum-PEON>' cuando no hay ninguna variable declarada
+C:\Users\Susana\Downloads\AJEFOTO30\src\Pieza.h(45,4): error C2014: el comando de preprocesador debe empezar con un primer espacio que no esté en blanco
+C:\Users\Susana\Downloads\AJEFOTO30\src\peon.cpp(12,44): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\Susana\Downloads\AJEFOTO30\src\peon.cpp(12,33): warning C4244: 'argumento': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\Susana\Downloads\AJEFOTO30\src\peon.cpp(12,21): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
+C:\Users\Susana\Downloads\AJEFOTO30\src\peon.cpp(21,40): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\Susana\Downloads\AJEFOTO30\src\peon.cpp(22,39): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\Susana\Downloads\AJEFOTO30\src\peon.cpp(23,41): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\Susana\Downloads\AJEFOTO30\src\peon.cpp(24,42): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\Susana\Downloads\AJEFOTO30\src\peon.cpp(28,35): warning C4244: 'argumento': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\Susana\Downloads\AJEFOTO30\src\peon.cpp(28,15): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
+C:\Users\Susana\Downloads\AJEFOTO30\src\peon.cpp(37,18): error C2039: "lista": no es un miembro de "ListaPiezas"
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(14): message : vea la declaración de 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\peon.cpp(37,45): error C2039: "lista": no es un miembro de "ListaPiezas"
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(14): message : vea la declaración de 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\peon.cpp(39,23): error C2039: "lista": no es un miembro de "ListaPiezas"
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(14): message : vea la declaración de 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\peon.cpp(39,55): error C2039: "lista": no es un miembro de "ListaPiezas"
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(14): message : vea la declaración de 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\peon.cpp(54,24): error C2039: "lista": no es un miembro de "ListaPiezas"
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(14): message : vea la declaración de 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\peon.cpp(54,66): error C2039: "lista": no es un miembro de "ListaPiezas"
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(14): message : vea la declaración de 'ListaPiezas'
+  Pieza.cpp
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(5,25): error C2504: 'Pieza': clase base sin definir
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(10,6): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(10,5): error C2535: 'rey::rey(void)': función miembro ya definida o declarada
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(9): message : vea la declaración de 'rey::rey'
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(12,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(13,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(9,9): error C2614: 'rey': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(10,33): error C2065: 'prey': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(10,39): error C2065: 'c': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(10,42): error C2065: 'REY': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(10,27): error C2614: 'rey': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(11,1): error C2504: 'Pieza': clase base sin definir
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(17,8): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(17,7): error C2535: 'alfil::alfil(void)': función miembro ya definida o declarada
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(16): message : vea la declaración de 'alfil::alfil'
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(21,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(22,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(16,11): error C2614: 'alfil': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(17,36): error C2065: 'palfil': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(17,44): error C2065: 'c': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(17,47): error C2065: 'ALFIL': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(17,30): error C2614: 'alfil': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(7,1): error C2504: 'Pieza': clase base sin definir
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(12,10): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(12,9): error C2535: 'caballo::caballo(void)': función miembro ya definida o declarada
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(11): message : vea la declaración de 'caballo::caballo'
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(15,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(16,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(11,13): error C2614: 'caballo': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(12,41): error C2065: 'pcaballo': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(12,51): error C2065: 'c': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(12,54): error C2065: 'CABALLO': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(12,35): error C2614: 'caballo': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(6,1): error C2504: 'Pieza': clase base sin definir
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(11,8): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(11,7): error C2535: 'reina::reina(void)': función miembro ya definida o declarada
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(10): message : vea la declaración de 'reina::reina'
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(15,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(16,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(10,11): error C2614: 'reina': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(11,37): error C2065: 'preina': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(11,45): error C2065: 'c': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(11,48): error C2065: 'REINA': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(11,31): error C2614: 'reina': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(7,1): error C2504: 'Pieza': clase base sin definir
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(12,8): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(12,7): error C2535: 'torre::torre(void)': función miembro ya definida o declarada
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(11): message : vea la declaración de 'torre::torre'
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(16,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(17,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(11,11): error C2614: 'torre': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(12,37): error C2065: 'ptorre': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(12,45): error C2065: 'c': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(12,48): error C2065: 'TORRE': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(12,31): error C2614: 'torre': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(16,7): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(16,7): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(16,26): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(22,15): error C2061: error de sintaxis: identificador 'Pieza'
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(26,7): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(26,7): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(26,26): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(31,13): error C2061: error de sintaxis: identificador 'Pieza'
+C:\Users\Susana\Downloads\AJEFOTO30\src\Pieza.h(10,35): warning C4091: 'typedef ': se ha omitido a la izquierda de '<unnamed-enum-BLANCO>' cuando no hay ninguna variable declarada
+C:\Users\Susana\Downloads\AJEFOTO30\src\Pieza.h(11,61): warning C4091: 'typedef ': se ha omitido a la izquierda de '<unnamed-enum-PEON>' cuando no hay ninguna variable declarada
+C:\Users\Susana\Downloads\AJEFOTO30\src\Pieza.h(45,4): error C2014: el comando de preprocesador debe empezar con un primer espacio que no esté en blanco
+C:\Users\Susana\Downloads\AJEFOTO30\src\Pieza.cpp(62,14): error C2039: "lista": no es un miembro de "ListaPiezas"
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(14): message : vea la declaración de 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\Pieza.cpp(62,38): error C2039: "lista": no es un miembro de "ListaPiezas"
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(14): message : vea la declaración de 'ListaPiezas'
+  reina.cpp
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(5,25): error C2504: 'Pieza': clase base sin definir
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(10,6): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(10,5): error C2535: 'rey::rey(void)': función miembro ya definida o declarada
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(9): message : vea la declaración de 'rey::rey'
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(12,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(13,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(9,9): error C2614: 'rey': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(10,33): error C2065: 'prey': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(10,39): error C2065: 'c': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(10,42): error C2065: 'REY': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(10,27): error C2614: 'rey': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(11,1): error C2504: 'Pieza': clase base sin definir
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(17,8): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(17,7): error C2535: 'alfil::alfil(void)': función miembro ya definida o declarada
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(16): message : vea la declaración de 'alfil::alfil'
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(21,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(22,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(16,11): error C2614: 'alfil': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(17,36): error C2065: 'palfil': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(17,44): error C2065: 'c': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(17,47): error C2065: 'ALFIL': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(17,30): error C2614: 'alfil': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(7,1): error C2504: 'Pieza': clase base sin definir
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(12,10): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(12,9): error C2535: 'caballo::caballo(void)': función miembro ya definida o declarada
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(11): message : vea la declaración de 'caballo::caballo'
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(15,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(16,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(11,13): error C2614: 'caballo': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(12,41): error C2065: 'pcaballo': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(12,51): error C2065: 'c': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(12,54): error C2065: 'CABALLO': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(12,35): error C2614: 'caballo': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(7,1): error C2504: 'Pieza': clase base sin definir
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(12,8): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(12,7): error C2535: 'torre::torre(void)': función miembro ya definida o declarada
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(11): message : vea la declaración de 'torre::torre'
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(16,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(17,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(11,11): error C2614: 'torre': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(12,37): error C2065: 'ptorre': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(12,45): error C2065: 'c': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(12,48): error C2065: 'TORRE': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(12,31): error C2614: 'torre': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(16,7): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(16,7): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(16,26): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(22,15): error C2061: error de sintaxis: identificador 'Pieza'
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(26,7): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(26,7): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(26,26): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(31,13): error C2061: error de sintaxis: identificador 'Pieza'
+C:\Users\Susana\Downloads\AJEFOTO30\src\Pieza.h(10,35): warning C4091: 'typedef ': se ha omitido a la izquierda de '<unnamed-enum-BLANCO>' cuando no hay ninguna variable declarada
+C:\Users\Susana\Downloads\AJEFOTO30\src\Pieza.h(11,61): warning C4091: 'typedef ': se ha omitido a la izquierda de '<unnamed-enum-PEON>' cuando no hay ninguna variable declarada
+C:\Users\Susana\Downloads\AJEFOTO30\src\Pieza.h(45,4): error C2014: el comando de preprocesador debe empezar con un primer espacio que no esté en blanco
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.cpp(7,36): error C2084: la función 'reina::reina(Vector,int)' ya tiene un cuerpo
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(11): message : vea la definición anterior de '{ctor}'
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.cpp(14,31): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.cpp(14,21): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.cpp(24,40): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.cpp(25,39): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.cpp(26,41): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.cpp(27,42): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.cpp(31,26): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.cpp(31,15): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.cpp(76,18): error C2039: "lista": no es un miembro de "ListaPiezas"
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(14): message : vea la declaración de 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.cpp(93,18): error C2039: "lista": no es un miembro de "ListaPiezas"
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(14): message : vea la declaración de 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.cpp(110,18): error C2039: "lista": no es un miembro de "ListaPiezas"
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(14): message : vea la declaración de 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.cpp(128,18): error C2039: "lista": no es un miembro de "ListaPiezas"
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(14): message : vea la declaración de 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.cpp(146,18): error C2039: "lista": no es un miembro de "ListaPiezas"
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(14): message : vea la declaración de 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.cpp(165,18): error C2039: "lista": no es un miembro de "ListaPiezas"
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(14): message : vea la declaración de 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.cpp(184,18): error C2039: "lista": no es un miembro de "ListaPiezas"
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(14): message : vea la declaración de 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.cpp(202,18): error C2039: "lista": no es un miembro de "ListaPiezas"
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(14): message : vea la declaración de 'ListaPiezas'
+  rey.cpp
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(11,1): error C2504: 'Pieza': clase base sin definir
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(17,8): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(17,7): error C2535: 'alfil::alfil(void)': función miembro ya definida o declarada
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(16): message : vea la declaración de 'alfil::alfil'
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(21,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(22,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(16,11): error C2614: 'alfil': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(17,36): error C2065: 'palfil': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(17,44): error C2065: 'c': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(17,47): error C2065: 'ALFIL': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(17,30): error C2614: 'alfil': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(7,1): error C2504: 'Pieza': clase base sin definir
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(12,10): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(12,9): error C2535: 'caballo::caballo(void)': función miembro ya definida o declarada
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(11): message : vea la declaración de 'caballo::caballo'
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(15,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(16,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(11,13): error C2614: 'caballo': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(12,41): error C2065: 'pcaballo': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(12,51): error C2065: 'c': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(12,54): error C2065: 'CABALLO': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(12,35): error C2614: 'caballo': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(6,1): error C2504: 'Pieza': clase base sin definir
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(11,8): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(11,7): error C2535: 'reina::reina(void)': función miembro ya definida o declarada
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(10): message : vea la declaración de 'reina::reina'
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(15,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(16,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(10,11): error C2614: 'reina': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(11,37): error C2065: 'preina': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(11,45): error C2065: 'c': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(11,48): error C2065: 'REINA': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(11,31): error C2614: 'reina': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(7,1): error C2504: 'Pieza': clase base sin definir
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(12,8): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(12,7): error C2535: 'torre::torre(void)': función miembro ya definida o declarada
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(11): message : vea la declaración de 'torre::torre'
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(16,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(17,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(11,11): error C2614: 'torre': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(12,37): error C2065: 'ptorre': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(12,45): error C2065: 'c': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(12,48): error C2065: 'TORRE': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.h(12,31): error C2614: 'torre': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(16,7): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(16,7): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(16,26): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(22,15): error C2061: error de sintaxis: identificador 'Pieza'
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(26,7): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(26,7): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(26,26): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(31,13): error C2061: error de sintaxis: identificador 'Pieza'
+C:\Users\Susana\Downloads\AJEFOTO30\src\Pieza.h(10,35): warning C4091: 'typedef ': se ha omitido a la izquierda de '<unnamed-enum-BLANCO>' cuando no hay ninguna variable declarada
+C:\Users\Susana\Downloads\AJEFOTO30\src\Pieza.h(11,61): warning C4091: 'typedef ': se ha omitido a la izquierda de '<unnamed-enum-PEON>' cuando no hay ninguna variable declarada
+C:\Users\Susana\Downloads\AJEFOTO30\src\Pieza.h(45,4): error C2014: el comando de preprocesador debe empezar con un primer espacio que no esté en blanco
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.cpp(12,39): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.cpp(12,31): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.cpp(12,21): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.cpp(21,40): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.cpp(22,39): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.cpp(23,41): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.cpp(24,42): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.cpp(28,26): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.cpp(28,15): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
+  torre.cpp
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(5,25): error C2504: 'Pieza': clase base sin definir
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(10,6): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(10,5): error C2535: 'rey::rey(void)': función miembro ya definida o declarada
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(9): message : vea la declaración de 'rey::rey'
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(12,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(13,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(9,9): error C2614: 'rey': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(10,33): error C2065: 'prey': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(10,39): error C2065: 'c': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(10,42): error C2065: 'REY': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\rey.h(10,27): error C2614: 'rey': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(11,1): error C2504: 'Pieza': clase base sin definir
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(17,8): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(17,7): error C2535: 'alfil::alfil(void)': función miembro ya definida o declarada
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(16): message : vea la declaración de 'alfil::alfil'
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(21,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(22,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(16,11): error C2614: 'alfil': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(17,36): error C2065: 'palfil': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(17,44): error C2065: 'c': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(17,47): error C2065: 'ALFIL': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\alfil.h(17,30): error C2614: 'alfil': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(7,1): error C2504: 'Pieza': clase base sin definir
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(12,10): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(12,9): error C2535: 'caballo::caballo(void)': función miembro ya definida o declarada
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(11): message : vea la declaración de 'caballo::caballo'
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(15,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(16,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(11,13): error C2614: 'caballo': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(12,41): error C2065: 'pcaballo': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(12,51): error C2065: 'c': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(12,54): error C2065: 'CABALLO': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\caballo.h(12,35): error C2614: 'caballo': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(6,1): error C2504: 'Pieza': clase base sin definir
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(11,8): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(11,7): error C2535: 'reina::reina(void)': función miembro ya definida o declarada
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(10): message : vea la declaración de 'reina::reina'
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(15,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(16,19): error C2061: error de sintaxis: identificador 'Vector'
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(10,11): error C2614: 'reina': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(11,37): error C2065: 'preina': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(11,45): error C2065: 'c': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(11,48): error C2065: 'REINA': identificador no declarado
+C:\Users\Susana\Downloads\AJEFOTO30\src\reina.h(11,31): error C2614: 'reina': inicialización de miembro no válida: 'Pieza' no es una base o miembro
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(16,7): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(16,7): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(16,26): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(22,15): error C2061: error de sintaxis: identificador 'Pieza'
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(26,7): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(26,7): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(26,26): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(31,13): error C2061: error de sintaxis: identificador 'Pieza'
+C:\Users\Susana\Downloads\AJEFOTO30\src\Pieza.h(10,35): warning C4091: 'typedef ': se ha omitido a la izquierda de '<unnamed-enum-BLANCO>' cuando no hay ninguna variable declarada
+C:\Users\Susana\Downloads\AJEFOTO30\src\Pieza.h(11,61): warning C4091: 'typedef ': se ha omitido a la izquierda de '<unnamed-enum-PEON>' cuando no hay ninguna variable declarada
+C:\Users\Susana\Downloads\AJEFOTO30\src\Pieza.h(45,4): error C2014: el comando de preprocesador debe empezar con un primer espacio que no esté en blanco
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.cpp(11,34): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.cpp(11,24): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.cpp(20,43): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.cpp(21,42): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.cpp(22,44): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.cpp(23,45): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.cpp(27,29): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.cpp(27,18): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.cpp(55,30): error C2039: "lista": no es un miembro de "ListaPiezas"
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(14): message : vea la declaración de 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.cpp(72,30): error C2039: "lista": no es un miembro de "ListaPiezas"
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(14): message : vea la declaración de 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.cpp(89,30): error C2039: "lista": no es un miembro de "ListaPiezas"
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(14): message : vea la declaración de 'ListaPiezas'
+C:\Users\Susana\Downloads\AJEFOTO30\src\torre.cpp(107,30): error C2039: "lista": no es un miembro de "ListaPiezas"
+C:\Users\Susana\Downloads\AJEFOTO30\src\ListaPiezas.h(14): message : vea la declaración de 'ListaPiezas'
+  Generando código...
