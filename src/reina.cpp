@@ -222,6 +222,9 @@ int reina::mov_correcto(Vector v, ListaPiezas l)
 
     if (contador == 3)
         return MOV_CORRECTO;    
+	
+	else
+		return ERROR;
 }
 
 void reina::movimientos(Vector v)
