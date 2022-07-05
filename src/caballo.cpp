@@ -15,7 +15,7 @@ caballo::caballo(Vector pcaballo, int c) {
 
 void caballo::dibuja() {
 	
-	glTranslatef(origen.x, origen.y, 0);
+	glTranslatef(origen.x-0.5, origen.y-0.9, 0);
 	glEnable(GL_TEXTURE_2D);
 	if(color==BLANCO)
 		glBindTexture(GL_TEXTURE_2D, ETSIDI::getTexture("imagenes/caballoB.png").id);
@@ -31,7 +31,7 @@ void caballo::dibuja() {
 	glEnd();
 	glEnable(GL_LIGHTING);
 	glDisable(GL_TEXTURE_2D);
-	glTranslatef(-origen.x, -origen.y, 0);
+	glTranslatef(-origen.x+0.5, -origen.y+0.9, 0);
 }
 
 
