@@ -14,7 +14,7 @@ peon::peon(Vector v, int c) {
 
 void peon::dibuja() {
 	
-	glTranslatef(origen.x, origen.y-0.37, 0.01);
+	glTranslatef(origen.x-0.5, origen.y-0.9, 0.01);
 	glEnable(GL_TEXTURE_2D);
 	if(color==BLANCO)
 		glBindTexture(GL_TEXTURE_2D, ETSIDI::getTexture("imagenes/peonB.png").id);
@@ -30,7 +30,7 @@ void peon::dibuja() {
 	glEnd();
 	glEnable(GL_LIGHTING);
 	glDisable(GL_TEXTURE_2D);
-	glTranslatef(-origen.x, -origen.y+0.37, 0);
+	glTranslatef(-origen.x+0.5, -origen.y+0.9, 0);
 
 }
 
