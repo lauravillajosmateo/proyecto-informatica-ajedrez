@@ -11,7 +11,7 @@ reina::reina(Vector preina, int c) {
 
 void reina::dibuja() {
 
-    glTranslatef(origen.x, origen.y, 0);
+    glTranslatef(origen.x-0.5, origen.y-0.9, 0);
     glEnable(GL_TEXTURE_2D);
     if (color==BLANCO)
         glBindTexture(GL_TEXTURE_2D, ETSIDI::getTexture("imagenes/reinaB.png").id);
@@ -28,7 +28,7 @@ void reina::dibuja() {
     glEnd();
     glEnable(GL_LIGHTING);
     glDisable(GL_TEXTURE_2D);
-    glTranslatef(-origen.x, -origen.y, 0);
+    glTranslatef(-origen.x+0.5, -origen.y+0.9, 0);
 }
 
 
