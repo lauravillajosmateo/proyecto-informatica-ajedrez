@@ -10,8 +10,8 @@ void OnDraw(void); //esta funcion sera llamada para dibujar
 void OnTimer(int value); //esta funcion sera llamada cuando transcurra una temporizacion
 void OnKeyboardDown(unsigned char key, int x, int y); //cuando se pulse una tecla	
 
-//mundo mundo1;
-menu menu1;
+mundo mundo1;
+//menu menu1;
 
 
 
@@ -40,11 +40,11 @@ int main(int argc, char* argv[])
 	glutKeyboardFunc(OnKeyboardDown);
 
 
-	//inicialización de los datos de la simulación
-	/*mundo1.inicializa();*/
+	//inicializaciÃ³n de los datos de la simulaciÃ³n
+	mundo1.inicializa();
 	
 	
-	/*mundo1.mueve();*/
+	
 
 
 	//pasarle el control a GLUT,que llamara a los callbacks
@@ -87,7 +87,7 @@ void OnKeyboardDown(unsigned char key, int x_t, int y_t) //movimiento
 	//mundo1.tecla(key);
 	menu1.tecla(key);
 
-	glutPostRedisplay(); //para señalizar que tiene que redibujar
+	glutPostRedisplay(); //para seÃ±alizar que tiene que redibujar
 
 
 }
