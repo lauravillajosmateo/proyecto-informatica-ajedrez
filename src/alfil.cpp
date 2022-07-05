@@ -7,7 +7,7 @@ using namespace std;
 
 void alfil::dibuja() {
 	
-	glTranslatef(origen.x, origen.y, 0);
+	glTranslatef(origen.x-0.5, origen.y-0.9, 0);
 	glEnable(GL_TEXTURE_2D);
 	if(color==BLANCO)
 		glBindTexture(GL_TEXTURE_2D, ETSIDI::getTexture("imagenes/alfilB.png").id);
@@ -23,7 +23,7 @@ void alfil::dibuja() {
 	glEnd();
 	glEnable(GL_LIGHTING);
 	glDisable(GL_TEXTURE_2D);	
-	glTranslatef(-origen.x, -origen.y, 0);
+	glTranslatef(-origen.x+0.5, -origen.y+0.9, 0);
 	
 }
 
