@@ -5,18 +5,13 @@
 
 using namespace std;
 
-peon::peon(Vector v, int c) {
-	
-	origen = v;
-	color = c;
 
-}
 
 void peon::dibuja() {
-	
-	glTranslatef(origen.x-0.5, origen.y-0.9, 0.01);
+
+	glTranslatef(origen.x - 0.5, origen.y - 0.9, 0.01);
 	glEnable(GL_TEXTURE_2D);
-	if(color==BLANCO)
+	if (color == BLANCO)
 		glBindTexture(GL_TEXTURE_2D, ETSIDI::getTexture("imagenes/peonB.png").id);
 	else
 		glBindTexture(GL_TEXTURE_2D, ETSIDI::getTexture("imagenes/peonN.png").id);
@@ -30,31 +25,50 @@ void peon::dibuja() {
 	glEnd();
 	glEnable(GL_LIGHTING);
 	glDisable(GL_TEXTURE_2D);
-	glTranslatef(-origen.x+0.5, -origen.y+0.9, 0);
+	glTranslatef(-origen.x + 0.5, -origen.y + 0.9, 0);
 
 }
 
 
-
-int peon::mov_correcto(Vector v) {
-	if (mov_correcto(v) == 1 && turno == 0) {
+int peon::mov_correcto(Vector v,ListaPiezas& l) {
+	int come = 0;
+	
+	for (int i = 0; i < l.numero; i++) {
+		if (color != l.lista[i]->getcolor() && (l.lista[i]->getpos() == v))
+			come = 1;
+		if (color == l.lista[i]->getcolor() && (l.lista[i]->getpos() == v))
+			return ERROR;
+		
+	}
 
 	if (color == BLANCO)
 	{
 		if (origen.y == 7) {
-			if (v.x == origen.x && v.y == origen.y - 1 && avanza == 1) {
+			if (v.x == origen.x && v.y == origen.y - 1 && come == 0) {
 				return AVANZA1;
+
 			}
-			else if (v.x == origen.x && v.y == origen.y - 2 && avanza == 1)
+			else if (v.x == origen.x && v.y == origen.y - 2 && come == 0) {
+				for (int i = 0; i < l.numero; i++) {
+					if (origen.x == l.lista[i]->getpos().x && origen.y - 1 == l.lista[i]->getpos().y)
+						return ERROR;
+				}
 				return AVANZA2;
+
+			}
+
+
 			else if (((v.x == origen.x - 1 && v.y == origen.y - 1) || (v.x == origen.x + 1 && v.y == origen.y - 1)) && come == 1)
 			{
 
 				return COME;
 			}
+
+			else
+				return ERROR;
 		}
 
-		else if (v.x == origen.x && v.y == origen.y - 1 && avanza == 1)
+		else if (v.x == origen.x && v.y == origen.y - 1 && come==0)
 			return AVANZA1;
 
 		else if (((v.x == origen.x - 1 && v.y == origen.y - 1) || (v.x == origen.x + 1 && v.y == origen.y - 1)) && come == 1) {
@@ -71,23 +85,23 @@ int peon::mov_correcto(Vector v) {
 	else
 	{
 		if (origen.y == 2) {
-			if (v.x == origen.x && v.y == origen.y + 1 && avanza == 1)
+			if (v.x == origen.x && v.y == origen.y + 1 && come == 0)
 				return AVANZA1;
-			else if (v.x == origen.x && v.y == origen.y + 2 && avanza == 1)
+			else if (v.x == origen.x && v.y == origen.y + 2 && come == 0)
 				return AVANZA2;
-			else if (((v.x == origen.x + 1 && v.y == origen.y + 1) || (v.x == origen.x - 1 && v.y == origen.y + 1)) && come == 1) {
-
+			else if (((v.x == origen.x + 1 && v.y == origen.y + 1) || (v.x == origen.x - 1 && v.y == origen.y + 1)) && come == 1)
 				return COME;
-			}
+			else
+				return ERROR;
+		
 
 		}
-		else if (v.x == origen.x && v.y == origen.y + 1 && avanza == 1)
+		else if (v.x == origen.x && v.y == origen.y + 1 && come ==0)
 			return AVANZA1;
 		else if (((v.x == origen.x + 1 && v.y == origen.y + 1) || (v.x == origen.x - 1 && v.y == origen.y + 1)) && come == 1) {
 
 			return COME;
 		}
-	}
 		else {
 			cout << "MOVIMIENTO INCORRECTO. Prueba otra vez." << endl;
 			return ERROR;
@@ -97,64 +111,106 @@ int peon::mov_correcto(Vector v) {
 
 
 
-void peon::movimientos(Vector v) {
 
-	if (color == BLANCO)
+
+
+
+void peon::movimientos(Vector v, ListaPiezas& l) {
+
+
+	if (turno == 0)
 	{
-		switch (mov_correcto(v)) {
-		case (AVANZA1):
+		if (color == BLANCO)
 		{
-			turno = 1;
 
-			origen.y = origen.y - 1;
-			break;
 
+			switch (mov_correcto(v,l)) {
+			case (AVANZA1):
+			{
+				turno = 2;
+
+				origen.y = origen.y - 1;
+
+				for (int i = 0; i < l.numero; i++) {
+					if (l.lista[i]->getmarca() == true)
+						l.lista[i]->hayjaque(l);
+				}
+
+				break;
+
+			}
+
+			case (AVANZA2):
+			{
+				turno = 2;
+				origen.y = origen.y - 2;
+				for (int i = 0; i < l.numero; i++) {
+					if (l.lista[i]->getmarca() == true)
+						l.lista[i]->hayjaque(l);
+				}
+				break;
+			}
+
+			case (COME):
+			{
+				turno = 2;
+
+				origen.x = v.x;
+				origen.y = v.y;
+
+				for (int i = 0; i < l.numero; i++) {
+					if (l.lista[i]->getmarca() == true)
+						l.lista[i]->hayjaque(l);
+				}
+				Pieza::piezacomida(v, l);
+
+				break;
+			}
+
+			}
 		}
-
-		case (AVANZA2):
+		else
 		{
-			turno = 1;
-			origen.y = origen.y - 2;
-			break;
-		}
+			switch (mov_correcto(v,l)) {
+			case (AVANZA1):
+			{
+				turno = 2;
+				origen.y = origen.y + 1;
+				for (int i = 0; i < l.numero; i++) {
+					if (l.lista[i]->getmarca() == true)
+						l.lista[i]->hayjaque(l);
+				}
+				break;
+			}
 
-		case (COME):
-		{
-			turno = 1;
+			case (AVANZA2):
+			{
+				turno = 2;
+				origen.y = origen.y + 2;
+				for (int i = 0; i < l.numero; i++) {
+					if (l.lista[i]->getmarca() == true)
+						l.lista[i]->hayjaque(l);
+				}
+				break;
+			}
 
-			origen.x = v.x;
-			origen.y = v.y;
-			break;
-		}
+			case (COME):
+			{
+				turno = 2;
+				origen.x = v.x;
+				origen.y = v.y;
+				Pieza::piezacomida(v, l);
+				for (int i = 0; i < l.numero; i++) {
+					if (l.lista[i]->getmarca() == true)
+						l.lista[i]->hayjaque(l);
+				}
+				break;
+			}
 
-		}
-	}
-	else
-	{
-		switch (mov_correcto(v)) {
-		case (AVANZA1):
-		{
-			turno = 1;
-			origen.y = origen.y + 1;
-			break;
-		}
-
-		case (AVANZA2):
-		{
-			turno = 1;
-			origen.y = origen.y + 2;
-			break;
-		}
-
-		case (COME):
-		{
-			turno = 1;
-			origen.x = v.x;
-			origen.y = v.y;
-			break;
-		}
+			}
 
 		}
+
 	}
 }
 
