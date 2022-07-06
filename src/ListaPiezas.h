@@ -15,17 +15,22 @@ public:
       ListaPiezas();
       bool agregar(Pieza* p);
       void dibuja();
-      void mueve(Vector fin, Pieza* p);
   
       Pieza* comprobar(Vector);
-      int switchca(Pieza* p, Vector v);
-  	void comerpeones(Pieza* p, Vector v);
 	void inicializarturnos();
-	void cambiarturnos();
-	void comer(Pieza* p, Vector v); 
+	void cambiarturnos(); 
 	void dibujatblancas();
 	void dibujatnegras();
 	void hayjaque();
 	void jaquemate();
+	
+	
+	friend class torre;
+	friend class Pieza;
+	friend class peon;
+	friend class alfil;
+	friend class caballo;
+	friend class rey;
+	friend class reina;
   
 };
