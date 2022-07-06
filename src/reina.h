@@ -8,12 +8,12 @@ private:
 	
 public:
 	reina():Pieza(){}
-	reina(Vector preina, int c);
+	reina(Vector preina, int c):Pieza(preina, c, false) {}
 
 	void dibuja();
 
-	int mov_correcto(Vector, ListaPiezas);
-	void movimientos(Vector);
+	int mov_correcto(Vector, ListaPiezas&);
+	void movimientos(Vector, ListaPiezas&);
 
 };
 
