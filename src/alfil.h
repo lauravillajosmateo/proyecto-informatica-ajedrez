@@ -1,25 +1,17 @@
 #pragma once
-
-
-
 #include "Pieza.h"
-
-
-
 
 class alfil:public Pieza
 {
 
-private:
-
 public:
 	alfil(): Pieza(){}
-	alfil(Vector palfil, int c);
+	alfil(Vector palfil, int c):Pieza(palfil, c, false) {}
 	void dibuja();
 	
 
-	int mov_correcto(Vector,ListaPiezas);
-	void movimientos(Vector,ListaPiezas);
+	int mov_correcto(Vector,ListaPiezas&);
+	void movimientos(Vector, ListaPiezas&);
 	
 	
 
