@@ -7,12 +7,6 @@
 using namespace std;
 
 
-caballo::caballo(Vector pcaballo, int c) {
-	origen=pcaballo;
-	color =c;
-}
-
-
 void caballo::dibuja() {
 	
 	glTranslatef(origen.x-0.5, origen.y-0.9, 0);
@@ -34,14 +28,13 @@ void caballo::dibuja() {
 	glTranslatef(-origen.x+0.5, -origen.y+0.9, 0);
 }
 
-
-void caballo::movimientos(Vector v, ListaPiezas l)
+void caballo::movimientos(Vector v, ListaPiezas& l)
 {
-	if (mov_correcto(v,l) == 1 && turno == 0) {
+	if (mov_correcto(v, l) == 1 && turno == 0) {
 
-		turno = 1;
+		turno = 2;
 
-		if (v.x > origen.x && v.y > origen.y && fabs(v.y - origen.y) == 2) {
+		if (v.x > origen.x && v.y > origen.y && fabs(v.y - origen.y) == 2 && fabs(v.x - origen.x) == 1) {
 			do { //movimiento arriba-derecha
 
 				origen.x = origen.x + 1;
@@ -50,7 +43,7 @@ void caballo::movimientos(Vector v, ListaPiezas l)
 			} while (origen.x != v.x && origen.y != v.y);
 		}
 
-		else if (v.x < origen.x && v.y < origen.y && fabs(v.y - origen.y) == 2) {
+		else if (v.x < origen.x && v.y < origen.y && fabs(v.y - origen.y) == 2 && fabs(v.x - origen.x) == 1) {
 			do { //movimiento abajo-izquierda
 
 				origen.x = origen.x - 1;
@@ -60,7 +53,7 @@ void caballo::movimientos(Vector v, ListaPiezas l)
 			} while (origen.x != v.x && origen.y != v.y);
 		}
 
-		else if (v.x < origen.x && v.y > origen.y && fabs(v.y - origen.y) == 2) {
+		else if (v.x < origen.x && v.y > origen.y && fabs(v.y - origen.y) == 2 && fabs(v.x - origen.x) == 1) {
 			do { //arriba-izquierda
 
 				origen.x = origen.x - 1; //posxini es la posicion en x donde estamos en ese mometno de comparar
@@ -69,7 +62,7 @@ void caballo::movimientos(Vector v, ListaPiezas l)
 			} while (origen.x != v.x && origen.y != v.y);
 		}
 
-		else if (v.x > origen.x && v.y < origen.y && fabs(v.y - origen.y) == 2) {
+		else if (v.x > origen.x && v.y < origen.y && fabs(v.y - origen.y) == 2 && fabs(v.x - origen.x) == 1) {
 			do { //abajo-derecha
 
 				origen.x = origen.x + 1; //posxini es la posicion en x donde estamos en ese mometno de comparar
@@ -78,7 +71,7 @@ void caballo::movimientos(Vector v, ListaPiezas l)
 			} while (origen.x != v.x && origen.y != v.y);
 		}
 
-		else if (v.x > origen.x && v.y < origen.y && fabs(v.y - origen.y) == 1) {
+		else if (v.x > origen.x && v.y < origen.y && fabs(v.y - origen.y) == 1 && fabs(v.x - origen.x) == 2) {
 			do { //derecha-abajo
 
 				origen.x = origen.x + 2; //posxini es la posicion en x donde estamos en ese mometno de comparar
@@ -87,7 +80,7 @@ void caballo::movimientos(Vector v, ListaPiezas l)
 			} while (origen.x != v.x && origen.y != v.y);
 		}
 
-		else if (v.x > origen.x && v.y > origen.y && fabs(v.y - origen.y) == 1) {
+		else if (v.x > origen.x && v.y > origen.y && fabs(v.y - origen.y) == 1 && fabs(v.x - origen.x) == 2) {
 			do { //derecha-arriba
 
 				origen.x = origen.x + 2; //posxini es la posicion en x donde estamos en ese mometno de comparar
@@ -96,7 +89,7 @@ void caballo::movimientos(Vector v, ListaPiezas l)
 			} while (origen.x != v.x && origen.y != v.y);
 		}
 
-		else if (v.x < origen.x && v.y > origen.y && v.y - origen.y == 1 && fabs(v.y - origen.y) == 1) {
+		else if (v.x < origen.x && v.y > origen.y && fabs(v.y - origen.y) == 1 && fabs(v.x - origen.x) == 2) {
 			do { //izquierda-arriba
 
 				origen.x = origen.x - 2; //posxini es la posicion en x donde estamos en ese mometno de comparar
@@ -105,7 +98,7 @@ void caballo::movimientos(Vector v, ListaPiezas l)
 			} while (origen.x != v.x && origen.y != v.y);
 		}
 
-		else if (v.x < origen.x && v.y < origen.y && fabs(v.y - origen.y) == 1) {
+		else if (v.x < origen.x && v.y < origen.y && fabs(v.y - origen.y) == 1 && fabs(v.x - origen.x) == 2) {
 			do { //izquierda-abajo
 
 				origen.x = origen.x - 2; //posxini es la posicion en x donde estamos en ese mometno de comparar
@@ -114,11 +107,17 @@ void caballo::movimientos(Vector v, ListaPiezas l)
 			} while (origen.x != v.x && origen.y != v.y);
 		}
 
+
+		for (int i = 0; i < l.numero; i++) {
+			if (l.lista[i]->getmarca() == true)
+				l.lista[i]->hayjaque(l);
+		}
 	}
-	}
+
 	else
 		cout << "MOVIMIENTO INCORRECTO. Prueba otra vez." << endl;
 }
+
 
 int caballo::mov_correcto(Vector v, ListaPiezas l)
 {
@@ -128,12 +127,15 @@ int caballo::mov_correcto(Vector v, ListaPiezas l)
 	else
 		return ERROR;
 
-	if (Pieza::casillalibre(v, l) == 1)
-		contador++;
-
-	if (contador == 2)
+	if (contador == 1 && Pieza::casillalibre(v, l) == 1){
+		Pieza::piezacomida(v,l);
 		return MOV_CORRECTO;
-	else
+	}
+
+	if (contador == 1 && Pieza::casillalibre(v, l) == 2)
+		return MOV_CORRECTO;
+
+	if (Pieza::casillalibre(v, l) == 0)
 		return ERROR;
 }
 
