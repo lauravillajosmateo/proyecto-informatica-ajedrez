@@ -5,11 +5,12 @@
 using namespace std;
 
 
+
 void alfil::dibuja() {
-	
-	glTranslatef(origen.x-0.5, origen.y-0.9, 0);
+
+	glTranslatef(origen.x - 0.5, origen.y - 0.9, 0);
 	glEnable(GL_TEXTURE_2D);
-	if(color==BLANCO)
+	if (color == BLANCO)
 		glBindTexture(GL_TEXTURE_2D, ETSIDI::getTexture("imagenes/alfilB.png").id);
 	else
 		glBindTexture(GL_TEXTURE_2D, ETSIDI::getTexture("imagenes/alfilN.png").id);
@@ -22,18 +23,19 @@ void alfil::dibuja() {
 	glTexCoord2d(0, 0); glVertex2f(-0.4, 0.8);
 	glEnd();
 	glEnable(GL_LIGHTING);
-	glDisable(GL_TEXTURE_2D);	
-	glTranslatef(-origen.x+0.5, -origen.y+0.9, 0);
-	
+	glDisable(GL_TEXTURE_2D);
+	glTranslatef(-origen.x + 0.5, -origen.y + 0.9, 0);
+
 }
 
 
 
 
-int alfil::mov_correcto(Vector v,ListaPiezas l)
+int alfil::mov_correcto(Vector v,ListaPiezas& l)
 {
 	Vector aux = origen;
 	int contador = 0;
+	int mover = 1;
 	//primero se verifica que la posicion es valida por la naturaleza de la pieza
 	if ((v.x > origen.x) && (v.y < origen.y) || (v.x < origen.x) && (v.y > origen.y)) {
 		if (v.x + v.y == origen.x + origen.y) {
@@ -60,7 +62,7 @@ int alfil::mov_correcto(Vector v,ListaPiezas l)
 		{
 			for (int i = 0; i < l.numero; i++)
 			{
-				if (aux == l.lista[i]->getpos())
+				if (aux.x+1 == l.lista[i]->getpos().x && aux.y + 1 == l.lista[i]->getpos().y)
 				{
 					mover = 0;
 				}
@@ -79,7 +81,7 @@ int alfil::mov_correcto(Vector v,ListaPiezas l)
 		{
 			for (int i = 0; i < l.numero; i++)
 			{
-				if (aux == l.lista[i]->getpos())
+				if (aux.x - 1 == l.lista[i]->getpos().x && aux.y + 1 == l.lista[i]->getpos().y)
 				{
 					mover = 0;
 				}
@@ -98,7 +100,7 @@ int alfil::mov_correcto(Vector v,ListaPiezas l)
 		{
 			for (int i = 0; i < l.numero; i++)
 			{
-				if (aux == l.lista[i]->getpos())
+				if (aux.x + 1 == l.lista[i]->getpos().x && aux.y - 1 == l.lista[i]->getpos().y)
 				{
 					mover = 0;
 				}
@@ -116,7 +118,7 @@ int alfil::mov_correcto(Vector v,ListaPiezas l)
 		{
 			for (int i = 0; i < l.numero; i++)
 			{
-				if (aux == l.lista[i]->getpos())
+				if (aux.x - 1 == l.lista[i]->getpos().x && aux.y - 1 == l.lista[i]->getpos().y)
 				{
 					mover = 0;
 				}
@@ -132,15 +134,22 @@ int alfil::mov_correcto(Vector v,ListaPiezas l)
 	else
 		contador++;
 
-	if (Pieza::casillalibre(v, l) == 1)
-		contador++;
+	if (contador == 2 && Pieza::casillalibre(v, l) == 1) {
 
-	if (contador == 3)
+		Pieza::piezacomida(v, l);
 		return MOV_CORRECTO;
+	}
+
+	if (contador == 2 && Pieza::casillalibre(v, l) == 2) {
+		return MOV_CORRECTO;
+	}
+
+	if (Pieza::casillalibre(v, l) == 0)
+		return ERROR;
 
 }
 
-void alfil::movimientos(Vector v,ListaPiezas l)
+void alfil::movimientos(Vector v,ListaPiezas& l)
 {
 	if (mov_correcto(v,l) == 1 && turno==0) {
 
@@ -181,9 +190,17 @@ void alfil::movimientos(Vector v,ListaPiezas l)
 			} while (origen.x != v.x && origen.y != v.y);
 		}
 
-		turno = 1;
+		turno = 2;
+
+		for (int i = 0; i < l.numero; i++) {
+			if (l.lista[i]->getmarca() == true)
+				l.lista[i]->hayjaque(l);
+		}
+
 	}
 	else
 		cout << "MOVIMIENTO INCORRECTO. Prueba otra vez." << endl;
 }
+
+
 
