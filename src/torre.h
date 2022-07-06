@@ -9,12 +9,12 @@ private:
 
 public:
 	torre():Pieza(){}
-	torre(Vector ptorre,int c);
+	torre(Vector ptorre,int c):Pieza(ptorre, c, false) {}
 
 	void dibuja();
 
-	int mov_correcto(Vector,ListaPiezas);
-	void movimientos(Vector,ListaPiezas);
+	int mov_correcto(Vector,ListaPiezas&);
+	void movimientos(Vector,ListaPiezas&);
 	
 };
 
