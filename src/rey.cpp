@@ -5,9 +5,8 @@
 
 using namespace std;
 
-
 void rey::dibuja() {
-	glTranslatef(origen.x-0.5, origen.y-0.9, 0.01);
+	glTranslatef(origen.x - 0.5, origen.y - 0.9, 0.1);
 	glEnable(GL_TEXTURE_2D);
 	if (color == BLANCO)
 		glBindTexture(GL_TEXTURE_2D, ETSIDI::getTexture("imagenes/reyB.png").id);
@@ -23,11 +22,11 @@ void rey::dibuja() {
 	glEnd();
 	glEnable(GL_LIGHTING);
 	glDisable(GL_TEXTURE_2D);
-	glTranslatef(-origen.x+0.5, -origen.y+0.9, 0);
+	glTranslatef(-origen.x + 0.5, -origen.y + 0.9, 0);
 }
 
 
-int rey::mov_correcto(Vector v,ListaPiezas l)
+int rey::mov_correcto(Vector v,ListaPiezas& l)
 {
 	Vector aux = origen;
 	int contador = 0;
@@ -60,22 +59,28 @@ int rey::mov_correcto(Vector v,ListaPiezas l)
 	else
 		return ERROR;
 
-	if (Pieza::casillalibre(v, l) == 1)
-		contador++;
+	if (contador == 1 && Pieza::casillalibre(v, l) == 1) {
 
-	if (contador == 2)
+		Pieza::piezacomida(v, l);
 		return MOV_CORRECTO;
-	else
+	}
+
+	if (contador == 1 && Pieza::casillalibre(v, l) == 2) {
+
+		return MOV_CORRECTO;
+	}
+
+	if(Pieza::casillalibre(v, l) == 0)
 		return ERROR;
 
 }
 
 
-void rey::movimientos(Vector v,ListaPiezas l)
+void rey::movimientos(Vector v,ListaPiezas& l)
 {
 	if (mov_correcto(v,l) == 1 && turno == 0) {
 		if (mov_correcto(v,l) == 1) {
-			turno = 1;
+			turno = 2;
 			if ((v.x == origen.x) && (v.y > origen.y))//mover arriba
 				origen.y = origen.y + 1;
 			else if ((v.x == origen.x) && (v.y < origen.y))//mover abajo
@@ -105,9 +110,24 @@ void rey::movimientos(Vector v,ListaPiezas l)
 				origen.y = origen.y - 1;
 			}
 		}
+		for (int i = 0; i < l.numero; i++) {
+			if (l.lista[i]->getmarca() == true)
+				l.lista[i]->hayjaque(l);
+		}
 	}
 	else
 		cout << "MOVIMIENTO INCORRECTO. Prueba otra vez." << endl;
 }
 
-
+//void rey::hayjaque(ListaPiezas& l) {
+//	
+//	for (int i = 0; i < l.numero; i++) {
+//		if (l.lista[i]->getcolor() != color && l.lista[i]->mov_correcto(origen, l)) {
+//			if (color == BLANCO)
+//				cout << "Hay jaque para blancas" << endl << endl;
+//			else
+//				cout << "Hay jaque para negras" << endl << endl;
+//		}
+//
+//	}
+//}
