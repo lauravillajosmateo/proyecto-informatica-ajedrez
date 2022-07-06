@@ -7,9 +7,6 @@
 #include "Pieza.h"
 
 class peon:public Pieza {
-public:
-	int come;
-	int avanza;
 
 public:
 	peon():Pieza(){}
@@ -17,7 +14,7 @@ public:
 
 	void dibuja();
 
-	int mov_correcto(Vector);
-	void movimientos(Vector);
+	int mov_correcto(Vector, ListaPiezas&);
+	void movimientos(Vector, ListaPiezas&);
 
 };
