@@ -10,7 +10,7 @@ class peon:public Pieza {
 
 public:
 	peon():Pieza(){}
-	peon(Vector v, int c);
+	peon(Vector v, int c):Pieza(v, c, false) {}
 
 	void dibuja();
 
