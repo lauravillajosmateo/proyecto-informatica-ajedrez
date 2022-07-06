@@ -7,13 +7,6 @@
 using namespace std;
 
 
-torre::torre(Vector ptorre, int c) {
-    origen =ptorre;
-    color=c;
-}
-
-
-
 void torre::dibuja() {
     glTranslatef(origen.x-0.5, origen.y-0.9, 0);
     glEnable(GL_TEXTURE_2D);
@@ -36,10 +29,12 @@ void torre::dibuja() {
 
 
 
-int torre::mov_correcto(Vector v,ListaPiezas l) //movimiento valido por naturaleza de la pieza
+int torre::mov_correcto(Vector v,ListaPiezas& l) //movimiento valido por naturaleza de la pieza
 {
     Vector aux = origen;
     int contador = 0;
+    int mover = 1;
+
     if ((v.x == origen.x) && (v.y == origen.y)) {
         return ERROR;
     }
@@ -54,13 +49,12 @@ int torre::mov_correcto(Vector v,ListaPiezas l) //movimiento valido por naturale
         }
     }
     //hacia arriba
-
     if (v.x == origen.x && v.y >origen.y)
     {
         do
         {
             for (int i = 0; i < l.numero; i++) {
-                if (aux == l.lista[i]->getpos())
+                if (aux.y + 1 == l.lista[i]->getpos().y && aux.x == l.lista[i]->getpos().x)
                 {
                     mover = 0;
                 }
@@ -77,7 +71,7 @@ int torre::mov_correcto(Vector v,ListaPiezas l) //movimiento valido por naturale
         do
         {
             for (int i = 0; i < l.numero; i++) {
-                if (aux == l.lista[i]->getpos())
+                if (aux.x - 1 == l.lista[i]->getpos().x && aux.y == l.lista[i]->getpos().y)
                 {
                     mover = 0;
                 }
@@ -94,7 +88,7 @@ int torre::mov_correcto(Vector v,ListaPiezas l) //movimiento valido por naturale
         do
         {
             for (int i = 0; i < l.numero; i++) {
-                if (aux == l.lista[i]->getpos())
+                if (aux.x + 1 == l.lista[i]->getpos().x && aux.y == l.lista[i]->getpos().y)
                 {
                     mover = 0;
                 }
@@ -112,7 +106,7 @@ int torre::mov_correcto(Vector v,ListaPiezas l) //movimiento valido por naturale
         do
         {
             for (int i = 0; i < l.numero; i++) {
-                if (aux == l.lista[i]->getpos())
+                if (aux.y-1 == l.lista[i]->getpos().y&& aux.x == l.lista[i]->getpos().x)
                 {
                     mover = 0;
                 }
@@ -122,30 +116,32 @@ int torre::mov_correcto(Vector v,ListaPiezas l) //movimiento valido por naturale
             aux.y--;
         } while (aux.y != v.y);//mover 0 es que NO se puede mover
     }
-
     if (mover == 0)
         return ERROR;
     else
         contador++;
     
-    if (Pieza::casillalibre(v, l) == 1)
-        contador++;
-    else
-        return ERROR;
+    if (contador == 2 && Pieza::casillalibre(v, l) == 1) {
 
-
-    if (contador == 3)
+        Pieza::piezacomida(v, l);
         return MOV_CORRECTO;
-    
+    }
+
+    if (contador == 2 && Pieza::casillalibre(v, l) == 2) {
+        return MOV_CORRECTO;
+    }
+
+    if (casillalibre(v, l) == 0)
+        return ERROR;
 
 
 }
 
 
-void torre::movimientos(Vector v, ListaPiezas l) 
+void torre::movimientos(Vector v, ListaPiezas& l) 
 {
     if (mov_correcto(v,l) == 1 && turno==0) {
-        turno = 1;
+        turno = 2;
         if ((v.x == origen.x) && (v.y > origen.y))//mover arriba
         {
             do {
@@ -154,7 +150,6 @@ void torre::movimientos(Vector v, ListaPiezas l)
         }
         else if ((v.x == origen.x) && (v.y < origen.y))//mover abajo
         {
-            cout << "mueve abajo" << endl;
             do {
                 origen.y = origen.y - 1;
             } while (origen.y != v.y);
@@ -172,6 +167,10 @@ void torre::movimientos(Vector v, ListaPiezas l)
             } while (origen.x != v.x);
         }
 
+        for (int i = 0; i < l.numero; i++) {
+            if (l.lista[i]->getmarca() == true)
+                l.lista[i]->hayjaque(l);
+        }
     }
     else
         cout << "MOVIMIENTO INCORRECTO. Prueba otra vez." << endl;
