@@ -108,14 +108,7 @@ void menu::mueve()
 	if (estado == JUEGO) {
 		mundo1.mueve();
 		mundo1.dibuja();
-		mundo1.hayjaqueB();
-		mundo1.hayjaqueN();
-		if (mundo1.final() == 1)
-		{
-			estado = FINJUEGO;
-			cout << "FIN DEL JUEGO, HAS COMIDO AL REY" << endl;
-			exit(0);
-		}
+		
 	}
 	
 }
