@@ -10,8 +10,8 @@ void OnDraw(void); //esta funcion sera llamada para dibujar
 void OnTimer(int value); //esta funcion sera llamada cuando transcurra una temporizacion
 void OnKeyboardDown(unsigned char key, int x, int y); //cuando se pulse una tecla	
 
-mundo mundo1;
-//menu menu1;
+
+menu menu1;
 
 
 
@@ -41,7 +41,7 @@ int main(int argc, char* argv[])
 
 
 	//inicialización de los datos de la simulación
-	mundo1.inicializa();
+	
 	
 	
 	
@@ -71,7 +71,7 @@ void OnDraw(void)
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 
-	/*mundo1.dibuja();*/
+	
 	menu1.dibuja();
 
 
@@ -84,7 +84,7 @@ void OnDraw(void)
 void OnKeyboardDown(unsigned char key, int x_t, int y_t) //movimiento
 {
 
-	//mundo1.tecla(key);
+	
 	menu1.tecla(key);
 
 	glutPostRedisplay(); //para señalizar que tiene que redibujar
@@ -95,10 +95,7 @@ void OnKeyboardDown(unsigned char key, int x_t, int y_t) //movimiento
 void OnTimer(int value)
 {
 	menu1.mueve();
-	/*mundo1.mueve();
-	mundo1.dibuja();
-	mundo1.hayjaqueB();
-	mundo1.hayjaqueN();*/
+	
 
 	//no borrar estas lineas
 	glutTimerFunc(25, OnTimer, 0);
