@@ -69,10 +69,12 @@ void Pieza::jaquemate(ListaPiezas& l) {
 			contador++;
 	}
 
-	if (contador == 9 && c==1)
+	if (contador == 9 && c==1){
 		cout << "JAQUE MATE para angeles." << endl << endl;
+		cout << "FIN DEL JUEGO" << endl;
 
-
+		exit(0);
+	}
 
 	for (int i = 0; i < l.numero; i++) {
 		//primero se comprueba que al menos una pieza del equipo contrario pueda comer al rey en su proximo movimiento
@@ -105,9 +107,12 @@ void Pieza::jaquemate(ListaPiezas& l) {
 			contadorn++;
 	}
 
-	if (contadorn == 9 && cn==1)
+	if (contadorn == 9 && cn==1){
 		cout << "JAQUE MATE para demonios." << endl << endl;
+		cout << "FIN DEL JUEGO" << endl;
 
+		exit(0);
+	}
 
 }
 
