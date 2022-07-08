@@ -5,6 +5,8 @@
 
 void Marco::dibuja() {
 
+    glTranslatef(0.5, 0.5, 0);
+
     glBegin(GL_LINES);//abajo
     glColor3f(150, 55, 0);
     glVertex3f(-0.01, -0.01, 0);
