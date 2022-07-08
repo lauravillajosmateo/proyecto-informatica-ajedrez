@@ -30,6 +30,9 @@ void caballo::dibuja() {
 
 void caballo::movimientos(Vector v, ListaPiezas& l)
 {
+	if (mov_correcto(v, l) == 1 && Pieza::casillalibre(v, l) == 1)
+		Pieza::piezacomida(v, l);
+	
 	if (mov_correcto(v, l) == 1 && turno == 0) {
 
 		turno = 2;
@@ -132,8 +135,9 @@ int caballo::mov_correcto(Vector v, ListaPiezas l)
 		return MOV_CORRECTO;
 	}
 
-	if (contador == 1 && Pieza::casillalibre(v, l) == 2)
+	if (contador == 2) {
 		return MOV_CORRECTO;
+	}
 
 	if (Pieza::casillalibre(v, l) == 0)
 		return ERROR;
