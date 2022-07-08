@@ -5,6 +5,7 @@
 
 using namespace std;
 
+
 void rey::dibuja() {
 	glTranslatef(origen.x - 0.5, origen.y - 0.9, 0.1);
 	glEnable(GL_TEXTURE_2D);
@@ -59,27 +60,26 @@ int rey::mov_correcto(Vector v,ListaPiezas& l)
 	else
 		return ERROR;
 
-	if (contador == 1 && Pieza::casillalibre(v, l) == 1) {
 
-		Pieza::piezacomida(v, l);
-		return MOV_CORRECTO;
-	}
-
-	if (contador == 1 && Pieza::casillalibre(v, l) == 2) {
-
-		return MOV_CORRECTO;
-	}
-
-	if(Pieza::casillalibre(v, l) == 0)
+	if (Pieza::casillalibre(v, l) == 0)
 		return ERROR;
+	else
+		contador++;
+
+
+	if (contador == 2) {
+		return MOV_CORRECTO;
+	}
 
 }
 
 
 void rey::movimientos(Vector v,ListaPiezas& l)
 {
+	if (mov_correcto(v, l) == 1 && Pieza::casillalibre(v, l) == 1)
+		Pieza::piezacomida(v, l);
+
 	if (mov_correcto(v,l) == 1 && turno == 0) {
-		if (mov_correcto(v,l) == 1) {
 			turno = 2;
 			if ((v.x == origen.x) && (v.y > origen.y))//mover arriba
 				origen.y = origen.y + 1;
@@ -110,24 +110,10 @@ void rey::movimientos(Vector v,ListaPiezas& l)
 				origen.y = origen.y - 1;
 			}
 		}
-		for (int i = 0; i < l.numero; i++) {
-			if (l.lista[i]->getmarca() == true)
-				l.lista[i]->hayjaque(l);
+	for (int i = 0; i < l.numero; i++) {
+		if (l.lista[i]->getmarca() == true) {
+			l.lista[i]->hayjaque(l);
+			l.lista[i]->jaquemate(l);
 		}
 	}
-	else
-		cout << "MOVIMIENTO INCORRECTO. Prueba otra vez." << endl;
 }
-
-//void rey::hayjaque(ListaPiezas& l) {
-//	
-//	for (int i = 0; i < l.numero; i++) {
-//		if (l.lista[i]->getcolor() != color && l.lista[i]->mov_correcto(origen, l)) {
-//			if (color == BLANCO)
-//				cout << "Hay jaque para blancas" << endl << endl;
-//			else
-//				cout << "Hay jaque para negras" << endl << endl;
-//		}
-//
-//	}
-//}
