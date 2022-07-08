@@ -1,9 +1,9 @@
 #include "mundo.h"
-#include "freeglut.h"
+#include <freeglut.h>
 #include <iostream>
+#include "ETSIDI.h"
 
 using namespace std;
-
 
 
 mundo::mundo()
@@ -11,16 +11,12 @@ mundo::mundo()
 	x = 4.0;
 	y = 4.0;
 	z = 15.0;
-	mover = 0;
-	carteltb = 1; //empiezan blancas
-	cartelcome = 0;
 	posini.x, posini.y, posfin.x, posfin.y = 0;
 }
 
 mundo::~mundo()
 {
 }
-
 
 void mundo::inicializa()
 {
@@ -116,43 +112,40 @@ void mundo::inicializa()
 }
 
 void mundo::dibuja() {
-	gluLookAt(x, y, z,  // posicion del ojo
-		4.0, 4.0, 0.0,      // hacia que punto mira  (0,0,0) 
-		0.0, 1.0, 0.0);      // definimos hacia arriba (eje Y)    
+	gluLookAt(x, y, z,  
+		4.0, 4.0, 0.0,      
+		0.0, 1.0, 0.0);    
 
 	tablero1.Dibuja();
 	marco1.dibuja();
 
 	listapiezas.dibuja();
+	if (listapiezas.getturno() == 0)
+		dibujatblancas();
+	if(listapiezas.getturno() == 1)
+		dibujatnegras();
+
+
+	glEnable(GL_TEXTURE_2D);
+	glBindTexture(GL_TEXTURE_2D, ETSIDI::getTexture("imagenes/log1.png").id);
+	glDisable(GL_LIGHTING);
+	glBegin(GL_POLYGON);
+	glColor3f(1, 1, 1);
+	glTexCoord2d(0, 1); 
+	glVertex3f(14, 25, 0.1); //arriba izquierda
+	glTexCoord2d(1, 1); 
+	glVertex3f(24, 25, 0.1); //arriba derecha
+	glTexCoord2d(1, 0); 
+	glVertex3f(24, 27, 0.1); //abajo izquierda
+	glTexCoord2d(0, 0); 
+	glVertex3f(14, 27, 0.1); //abajo derecha
+	glEnd();
+	glEnable(GL_LIGHTING);
+	glDisable(GL_TEXTURE_2D);
+
 
 }
 	
-	
-
-//	//DIBUJA CARTEL DE TURNOS
-//	if (carteltb == 1) {
-//		cartel.dibujatblancas();
-//		
-//	}
-//	if (carteltb == 2) {
-//		cartel.dibujatnegras();
-//		
-//	}
-//	//DIBUJA CARTEL SISE HA COMIDO UNA PIEZA
-//
-//	if (cartelcome == 1) {
-//		
-//
-//		cout << "PIEZA COMIDA" << endl << endl;
-//		cartelcome = 0;
-//	}
-//
-//
-//}
-//
-
-
-
 
 
 void mundo::mueve()
@@ -171,6 +164,7 @@ void mundo::mueve()
 
 	if (listapiezas.comprobar(posini) != NULL) {
 		p = listapiezas.comprobar(posini);
+		p->avisoincorrecto(posfin, listapiezas);
 		p->movimientos(posfin, listapiezas);
 
 		listapiezas.cambiarturnos();
@@ -179,51 +173,76 @@ void mundo::mueve()
 }
 
 
+void mundo::dibujatblancas()
+{
+	gluLookAt(0, 7.5, 30,
+		0.0, 7.5, 0.0,
+		0.0, 1.0, 0.0);
+	ETSIDI::setTextColor(255, 255, 255);
+	ETSIDI::setFont("fuentes/Bitwise.ttf", 20);
+	ETSIDI::printxy("TURNO DE ANGELES", -8.5, 25);
+	ETSIDI::setTextColor(255, 255, 255);
+	ETSIDI::setFont("fuentes/Bitwise.ttf", 20);
+	ETSIDI::printxy(" 1 ", -10, 1);
+	ETSIDI::setTextColor(255, 255, 255);
+	ETSIDI::setFont("fuentes/Bitwise.ttf", 20);
+	ETSIDI::printxy(" 2 ", -10, 4.5);
+	ETSIDI::setTextColor(255, 255, 255);
+	ETSIDI::setFont("fuentes/Bitwise.ttf", 20);
+	ETSIDI::printxy("   1   2   3   4   5   6    7   8", -8, -2);
+	ETSIDI::setTextColor(255, 255, 255);
+	ETSIDI::setFont("fuentes/Bitwise.ttf", 20);
+	ETSIDI::printxy(" 3 ", -10, 7.5);
+	ETSIDI::setTextColor(255, 255, 255);
+	ETSIDI::setFont("fuentes/Bitwise.ttf", 20);
+	ETSIDI::printxy(" 4  ", -10, 10.5);
+	ETSIDI::setTextColor(255, 255, 255);
+	ETSIDI::setFont("fuentes/Bitwise.ttf", 20);
+	ETSIDI::printxy(" 5 ", -10, 13.5);
+	ETSIDI::setTextColor(255, 255, 255);
+	ETSIDI::setFont("fuentes/Bitwise.ttf", 20);
+	ETSIDI::printxy(" 6  ", -10, 16.5);
+	ETSIDI::setTextColor(255, 255, 255);
+	ETSIDI::setFont("fuentes/Bitwise.ttf", 20);
+	ETSIDI::printxy(" 7 ", -10, 19.5);
+	ETSIDI::setTextColor(255, 255, 255);
+	ETSIDI::setFont("fuentes/Bitwise.ttf", 20);
+	ETSIDI::printxy(" 8", -10, 22.5);
+}
 
-//int mundo::final()
-//{
-//	if ((reyn.getx() == 10 && reyn.gety() == 8) || (reyb.getx() == 10 && reyb.gety() == 8))
-//		return 1;
-//	else return 0;
-//
-//}
-//
-//
-//void mundo::hayjaqueB() //ok
-//{
-//	if (caballob1.mov_correcto(reyn.getx(), reyn.gety()) == 1)
-//		cout << "Hay jaque" << endl; //Cambiar por imagen que salte en pantalla
-//	if (caballob2.mov_correcto(reyn.getx(), reyn.gety()) == 1)
-//		cout << "Hay jaque" << endl;
-//	if (torreb1.mov_correcto(reyn.getx(), reyn.gety()) == 1)
-//		cout << "Hay jaque" << endl;
-//	if (torreb2.mov_correcto(reyn.getx(), reyn.gety()) == 1)
-//		cout << "Hay jaque" << endl;
-//	if (alfilb1.mov_correcto(reyn.getx(), reyn.gety()) == 1)
-//		cout << "Hay jaque" << endl;
-//	if (alfilb2.mov_correcto(reyn.getx(), reyn.gety()) == 1)
-//		cout << "Hay jaque" << endl;
-//	if (reinab.mov_correcto(reyn.getx(), reyn.gety()) == 1)
-//		cout << "Hay jaque" << endl;
-//
-//}
-//
-//void mundo::hayjaqueN() //ok
-//{
-//	if (caballon1.mov_correcto(reyb.getx(), reyb.gety()) == 1)
-//		cout << "Hay jaque" << endl;
-//	if (caballon2.mov_correcto(reyb.getx(), reyb.gety()) == 1)
-//		cout << "Hay jaque" << endl;
-//	if (torren1.mov_correcto(reyb.getx(), reyb.gety()) == 1)
-//		cout << "Hay jaque" << endl;
-//	if (torren2.mov_correcto(reyb.getx(), reyb.gety()) == 1)
-//		cout << "Hay jaque" << endl;
-//	if (alfiln1.mov_correcto(reyb.getx(), reyb.gety()) == 1)
-//		cout << "Hay jaque" << endl;
-//	if (alfiln2.mov_correcto(reyb.getx(), reyb.gety()) == 1)
-//		cout << "Hay jaque" << endl;
-//	if (reinan.mov_correcto(reyb.getx(), reyb.gety()) == 1)
-//		cout << "Hay jaque" << endl;
-//
-
-
+void mundo::dibujatnegras()
+{
+	gluLookAt(0, 7.5, 30,
+		0.0, 7.5, 0.0,
+		0.0, 1.0, 0.0);
+	ETSIDI::setTextColor(255, 0, 0);
+	ETSIDI::setFont("fuentes/Bitwise.ttf", 20);
+	ETSIDI::printxy("TURNO DE DEMONIOS", -8.5, 25);
+	ETSIDI::setTextColor(255, 255, 255);
+	ETSIDI::setFont("fuentes/Bitwise.ttf", 20);
+	ETSIDI::printxy(" 1 ", -10, 1);
+	ETSIDI::setTextColor(255, 255, 255);
+	ETSIDI::setFont("fuentes/Bitwise.ttf", 20);
+	ETSIDI::printxy(" 2 ", -10, 4.5);
+	ETSIDI::setTextColor(255, 255, 255);
+	ETSIDI::setFont("fuentes/Bitwise.ttf", 20);
+	ETSIDI::printxy("   1   2   3   4   5   6    7   8", -8, -2);
+	ETSIDI::setTextColor(255, 255, 255);
+	ETSIDI::setFont("fuentes/Bitwise.ttf", 20);
+	ETSIDI::printxy(" 3 ", -10, 7.5);
+	ETSIDI::setTextColor(255, 255, 255);
+	ETSIDI::setFont("fuentes/Bitwise.ttf", 20);
+	ETSIDI::printxy(" 4  ", -10, 10.5);
+	ETSIDI::setTextColor(255, 255, 255);
+	ETSIDI::setFont("fuentes/Bitwise.ttf", 20);
+	ETSIDI::printxy(" 5 ", -10, 13.5);
+	ETSIDI::setTextColor(255, 255, 255);
+	ETSIDI::setFont("fuentes/Bitwise.ttf", 20);
+	ETSIDI::printxy(" 6  ", -10, 16.5);
+	ETSIDI::setTextColor(255, 255, 255);
+	ETSIDI::setFont("fuentes/Bitwise.ttf", 20);
+	ETSIDI::printxy(" 7 ", -10, 19.5);
+	ETSIDI::setTextColor(255, 255, 255);
+	ETSIDI::setFont("fuentes/Bitwise.ttf", 20);
+	ETSIDI::printxy(" 8", -10, 22.5);
+}
