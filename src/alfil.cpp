@@ -151,6 +151,9 @@ int alfil::mov_correcto(Vector v,ListaPiezas& l)
 
 void alfil::movimientos(Vector v,ListaPiezas& l)
 {
+	if (mov_correcto(v, l) == 1 && Pieza::casillalibre(v, l) == 1)
+		Pieza::piezacomida(v, l);
+	
 	if (mov_correcto(v,l) == 1 && turno==0) {
 
 		if (v.x > origen.x && v.y > origen.y) {
