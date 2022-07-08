@@ -4,26 +4,29 @@
 #include "Vector.h"
 #include <iostream>
 
+
 class Pieza;
-class ListaPiezas{
-  
-  Pieza* lista[MAX_PIEZAS];
-  int numero;
-  int mover;
-  
+
+class ListaPiezas {
+
+	Pieza* lista[MAX_PIEZAS];
+	int numero;
+	int mover;
+	bool turno;
+
 public:
-      ListaPiezas();
-      bool agregar(Pieza* p);
-      void dibuja();
-  
-      Pieza* comprobar(Vector);
-	void inicializarturnos();
-	void cambiarturnos(); 
-	void dibujatblancas();
-	void dibujatnegras();
-	void hayjaque();
-	void jaquemate();
+	ListaPiezas();
+	bool agregar(Pieza* p);
+	void dibuja();
+
+	bool getturno();
+
+	Pieza* comprobar(Vector);
 	
+	void inicializarturnos();
+	void cambiarturnos();
+
+
 	
 	friend class torre;
 	friend class Pieza;
@@ -32,5 +35,5 @@ public:
 	friend class caballo;
 	friend class rey;
 	friend class reina;
-  
+
 };
