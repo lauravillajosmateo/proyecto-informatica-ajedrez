@@ -1,15 +1,9 @@
 #include "freeglut.h"
 #include "menu.h"
 
-
-
-
-
-
 void OnDraw(void); //esta funcion sera llamada para dibujar
 void OnTimer(int value); //esta funcion sera llamada cuando transcurra una temporizacion
 void OnKeyboardDown(unsigned char key, int x, int y); //cuando se pulse una tecla	
-
 
 menu menu1;
 
@@ -44,7 +38,7 @@ int main(int argc, char* argv[])
 	
 	
 	
-	
+
 
 
 	//pasarle el control a GLUT,que llamara a los callbacks
@@ -70,6 +64,7 @@ void OnDraw(void)
 	//Para definir el punto de vista
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
+	
 
 	
 	menu1.dibuja();
@@ -84,7 +79,7 @@ void OnDraw(void)
 void OnKeyboardDown(unsigned char key, int x_t, int y_t) //movimiento
 {
 
-	
+
 	menu1.tecla(key);
 
 	glutPostRedisplay(); //para señalizar que tiene que redibujar
@@ -94,6 +89,7 @@ void OnKeyboardDown(unsigned char key, int x_t, int y_t) //movimiento
 
 void OnTimer(int value)
 {
+	
 	menu1.mueve();
 	
 
@@ -103,5 +99,6 @@ void OnTimer(int value)
 
 
 }
+
 
 
