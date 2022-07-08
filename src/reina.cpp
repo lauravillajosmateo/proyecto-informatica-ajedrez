@@ -232,7 +232,7 @@ void reina::movimientos(Vector v,ListaPiezas& l)
 {
 	if (mov_correcto(v, l) == 1 && Pieza::casillalibre(v, l) == 1)
 		Pieza::piezacomida(v, l);
-	
+
 	if (mov_correcto(v,l) == 1 && turno == 0) {
 
 		turno = 2;
@@ -301,12 +301,11 @@ void reina::movimientos(Vector v,ListaPiezas& l)
 		}
 
 		for (int i = 0; i < l.numero; i++) {
-			if (l.lista[i]->getmarca() == true)
+			if (l.lista[i]->getmarca() == true) {
 				l.lista[i]->hayjaque(l);
+				l.lista[i]->jaquemate(l);
+			}
 		}
 	}
-
- else
-	cout << "MOVIMIENTO INCORRECTO. Prueba otra vez." << endl;
 }
 
