@@ -230,6 +230,9 @@ int reina::mov_correcto(Vector v, ListaPiezas l)
 
 void reina::movimientos(Vector v,ListaPiezas& l)
 {
+	if (mov_correcto(v, l) == 1 && Pieza::casillalibre(v, l) == 1)
+		Pieza::piezacomida(v, l);
+	
 	if (mov_correcto(v,l) == 1 && turno == 0) {
 
 		turno = 2;
