@@ -134,18 +134,13 @@ int alfil::mov_correcto(Vector v,ListaPiezas& l)
 	else
 		contador++;
 
-	if (contador == 2 && Pieza::casillalibre(v, l) == 1) {
-
-		Pieza::piezacomida(v, l);
-		return MOV_CORRECTO;
-	}
-
-	if (contador == 2 && Pieza::casillalibre(v, l) == 2) {
-		return MOV_CORRECTO;
-	}
-
 	if (Pieza::casillalibre(v, l) == 0)
 		return ERROR;
+	else 
+		contador++;
+	if (contador==3){
+		reyturn MOV_CORRECTO;
+	}
 
 }
 
@@ -196,8 +191,10 @@ void alfil::movimientos(Vector v,ListaPiezas& l)
 		turno = 2;
 
 		for (int i = 0; i < l.numero; i++) {
-			if (l.lista[i]->getmarca() == true)
+			if (l.lista[i]->getmarca() == true){
 				l.lista[i]->hayjaque(l);
+				l.lista[i]->jaquemate(l);
+			}
 		}
 
 	}
