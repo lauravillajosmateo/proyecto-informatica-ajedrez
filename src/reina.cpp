@@ -32,7 +32,7 @@ int reina::mov_correcto(Vector v, ListaPiezas l)
 {
     Vector aux = origen;
     int contador=0;
-	int mover=1;
+    int mover=1;
     //parte de la torre
     if ((v.x == origen.x) && (v.y == origen.y)) {
         return ERROR;
@@ -66,7 +66,7 @@ int reina::mov_correcto(Vector v, ListaPiezas l)
         
         //hacia arriba
 
-		if (v.x == origen.x && v.y > origen.y)
+	if (v.x == origen.x && v.y > origen.y)
 	{
 		do
 		{
@@ -79,11 +79,11 @@ int reina::mov_correcto(Vector v, ListaPiezas l)
 			}
 
 			aux.y++;
-		} while (aux.y != v.y);//mover 0 es que NO se puede mover
+		} while (aux.y + 1 != v.y);//mover 0 es que NO se puede mover
 	}
 
-		//hacia izquierda
-			if (v.x < origen.x && v.y == origen.y)
+	//hacia izquierda
+	if (v.x < origen.x && v.y == origen.y)
 	{
 		do
 		{
@@ -96,11 +96,11 @@ int reina::mov_correcto(Vector v, ListaPiezas l)
 			}
 
 			aux.x--;
-		} while (aux.x != v.x);//mover 0 es que NO se puede mover
+		} while (aux.x - 1!= v.x);//mover 0 es que NO se puede mover
 	}
 
 		//hacia derecha
-			if (v.x > origen.x && v.y == origen.y)
+	if (v.x > origen.x && v.y == origen.y)
 	{
 		do
 		{
@@ -113,7 +113,7 @@ int reina::mov_correcto(Vector v, ListaPiezas l)
 			}
 
 			aux.x++;
-		} while (aux.x != v.x);//mover 0 es que NO se puede mover
+		} while (aux.x + 1 != v.x);//mover 0 es que NO se puede mover
 	}
 
 		//hacia abajo
@@ -131,7 +131,7 @@ int reina::mov_correcto(Vector v, ListaPiezas l)
 			}
 
 			aux.y--;
-		} while (aux.y != v.y);//mover 0 es que NO se puede mover
+		} while (aux.y - 1 != v.y);//mover 0 es que NO se puede mover
 	}
 		//arriba derecha
 
@@ -149,7 +149,7 @@ int reina::mov_correcto(Vector v, ListaPiezas l)
 
 				aux.y++;
 				aux.x++;
-			} while (aux.x != v.x || aux.y != v.y);
+			} while (aux.x + 1!= v.x || aux.y + 1!= v.y);
 		}
 
 
@@ -168,7 +168,7 @@ int reina::mov_correcto(Vector v, ListaPiezas l)
 
 				aux.y++;
 				aux.x--;
-			} while (aux.x != v.x || aux.y != v.y);
+			} while (aux.x - 1 != v.x || aux.y + 1 != v.y);
 		}
 
 		//abajo derecha
@@ -187,7 +187,7 @@ int reina::mov_correcto(Vector v, ListaPiezas l)
 
 				aux.y--;
 				aux.x++;
-			} while (aux.x != v.x || aux.y != v.y);
+			} while (aux.x + 1 != v.x || aux.y - 1 != v.y);
 		}
 
 		//abajo izquierda
@@ -205,27 +205,23 @@ int reina::mov_correcto(Vector v, ListaPiezas l)
 
 				aux.y--;
 				aux.x--;
-			} while (aux.x != v.x || aux.y != v.y);
+			} while (aux.x - 1 != v.x || aux.y - 1 != v.y);
 		}
         
-      if (mover == 0)
+     if (mover == 0)
         return ERROR;
     else
         contador++;
-    
-   if (contador == 2 && Pieza::casillalibre(v, l) == 1) {
-
-		Pieza::piezacomida(v, l);
-		return MOV_CORRECTO;
-	}
-
-	if (contador == 2 && Pieza::casillalibre(v, l) == 2) {
-
-		return MOV_CORRECTO;
-	}
-
-	if(Pieza::casillalibre(v, l) == 0)
-		return ERROR;
+	
+    if(Pieza::casillalibre(v,l)==0)
+	    return ERROR;
+    else
+	    contador++;
+	
+    if(contador==3){
+	    return MOV_CORRECTO;
+    }
+	
 }
 
 void reina::movimientos(Vector v,ListaPiezas& l)
