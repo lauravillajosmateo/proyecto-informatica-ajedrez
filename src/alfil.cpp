@@ -198,8 +198,6 @@ void alfil::movimientos(Vector v,ListaPiezas& l)
 		}
 
 	}
-	else
-		cout << "MOVIMIENTO INCORRECTO. Prueba otra vez." << endl;
 }
 
 
