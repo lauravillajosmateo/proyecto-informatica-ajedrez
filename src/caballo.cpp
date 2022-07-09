@@ -112,13 +112,13 @@ void caballo::movimientos(Vector v, ListaPiezas& l)
 
 
 		for (int i = 0; i < l.numero; i++) {
-			if (l.lista[i]->getmarca() == true)
+			if (l.lista[i]->getmarca() == true){
 				l.lista[i]->hayjaque(l);
+				l.lista[i]->jaquemate(l);
+			}
 		}
 	}
 
-	else
-		cout << "MOVIMIENTO INCORRECTO. Prueba otra vez." << endl;
 }
 
 
@@ -134,13 +134,15 @@ int caballo::mov_correcto(Vector v, ListaPiezas l)
 		Pieza::piezacomida(v,l);
 		return MOV_CORRECTO;
 	}
+	
+	if(Pieza::casillalibre(v,l)==0)
+		return ERROR;
+	else
+		contador++;
 
 	if (contador == 2) {
 		return MOV_CORRECTO;
 	}
-
-	if (Pieza::casillalibre(v, l) == 0)
-		return ERROR;
 }
 
 
