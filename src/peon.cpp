@@ -72,11 +72,9 @@ int peon::mov_correcto(Vector v,ListaPiezas& l) {
 			return AVANZA1;
 
 		else if (((v.x == origen.x - 1 && v.y == origen.y - 1) || (v.x == origen.x + 1 && v.y == origen.y - 1)) && come == 1) {
-
 			return COME;
 		}
 		else {
-			cout << "MOVIMIENTO INCORRECTO. Prueba otra vez." << endl;
 			return ERROR;
 
 		}
@@ -103,7 +101,7 @@ int peon::mov_correcto(Vector v,ListaPiezas& l) {
 			return COME;
 		}
 		else {
-			cout << "MOVIMIENTO INCORRECTO. Prueba otra vez." << endl;
+			
 			return ERROR;
 		}
 	}
@@ -132,8 +130,11 @@ void peon::movimientos(Vector v, ListaPiezas& l) {
 				origen.y = origen.y - 1;
 
 				for (int i = 0; i < l.numero; i++) {
-					if (l.lista[i]->getmarca() == true)
-						l.lista[i]->hayjaque(l);
+					if (l.lista[i]->getmarca() == true){
+						l.lista[i]->hayjaque;
+						l.lista[i]->jaquemate(l);
+					}
+				
 				}
 
 				break;
@@ -146,7 +147,10 @@ void peon::movimientos(Vector v, ListaPiezas& l) {
 				origen.y = origen.y - 2;
 				for (int i = 0; i < l.numero; i++) {
 					if (l.lista[i]->getmarca() == true)
+					{
 						l.lista[i]->hayjaque(l);
+						l.lista[i]->jaquemate(l);
+					}
 				}
 				break;
 			}
@@ -159,8 +163,10 @@ void peon::movimientos(Vector v, ListaPiezas& l) {
 				origen.y = v.y;
 
 				for (int i = 0; i < l.numero; i++) {
-					if (l.lista[i]->getmarca() == true)
+					if (l.lista[i]->getmarca() == true){
 						l.lista[i]->hayjaque(l);
+						l.lista[i]->jaquemate(l);
+					}
 				}
 				Pieza::piezacomida(v, l);
 
@@ -178,7 +184,10 @@ void peon::movimientos(Vector v, ListaPiezas& l) {
 				origen.y = origen.y + 1;
 				for (int i = 0; i < l.numero; i++) {
 					if (l.lista[i]->getmarca() == true)
+					{
 						l.lista[i]->hayjaque(l);
+						l.lista[i]->jaquemate(l);
+					}
 				}
 				break;
 			}
@@ -188,8 +197,10 @@ void peon::movimientos(Vector v, ListaPiezas& l) {
 				turno = 2;
 				origen.y = origen.y + 2;
 				for (int i = 0; i < l.numero; i++) {
-					if (l.lista[i]->getmarca() == true)
+					if (l.lista[i]->getmarca() == true){
 						l.lista[i]->hayjaque(l);
+						l.lista[i]->jaquemate(l);
+					}
 				}
 				break;
 			}
@@ -201,8 +212,10 @@ void peon::movimientos(Vector v, ListaPiezas& l) {
 				origen.y = v.y;
 				Pieza::piezacomida(v, l);
 				for (int i = 0; i < l.numero; i++) {
-					if (l.lista[i]->getmarca() == true)
+					if (l.lista[i]->getmarca() == true){
 						l.lista[i]->hayjaque(l);
+						l.lista[i]->jaquemate(l);
+					}
 				}
 				break;
 			}
