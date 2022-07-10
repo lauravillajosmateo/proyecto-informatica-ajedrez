@@ -12,7 +12,6 @@ Vector::Vector(int posx, int posy)
 	y = posy;
 }
 
-
 bool Vector::operator==(const Vector& vector)
 {
 	if (vector.x == x && vector.y == y)
@@ -35,11 +34,11 @@ bool Vector::operator!=(const Vector& vector)
 		return false;
 }
 
-//Vector Vector:: operator+(Vector vector)
-//{
-//	Vector solucion;
-//	solucion.x = x + vector.x;
-//	solucion.y = y + vector.y;
-//
-//	return solucion;
-//}
+Vector Vector:: operator+(Vector vector)
+{
+	Vector solucion;
+	solucion.x = x + vector.x;
+	solucion.y = y + vector.y;
+
+	return solucion;
+}
