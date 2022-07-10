@@ -124,21 +124,18 @@ void caballo::movimientos(Vector v, ListaPiezas& l)
 
 int caballo::mov_correcto(Vector v, ListaPiezas l)
 {
-	int contador=0;
+	int contador = 0;
 	if ((fabs(origen.x - v.x) == 1) && (fabs(origen.y - v.y) == 2) || ((fabs(origen.x - v.x) == 2) && (fabs(origen.y - v.y) == 1)))
 		contador++;
 	else
 		return ERROR;
 
-	if (contador == 1 && Pieza::casillalibre(v, l) == 1){
-		Pieza::piezacomida(v,l);
-		return MOV_CORRECTO;
-	}
-	
-	if(Pieza::casillalibre(v,l)==0)
+
+	if (Pieza::casillalibre(v, l) == 0)
 		return ERROR;
 	else
 		contador++;
+
 
 	if (contador == 2) {
 		return MOV_CORRECTO;
